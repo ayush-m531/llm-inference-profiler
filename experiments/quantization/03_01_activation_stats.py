@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
-PROMPT = "Hello, my name is"
+PROMPT = "The history of artificial intelligence began in the 1950s with early researchers"
 CHANNEL_OUTLIER_THRESHOLD = 3.0
 
 print("Loading model...")
@@ -103,8 +103,8 @@ with torch.no_grad():
               f"span: {min_max_span:6.2f} | outlier channels: {num_outlier_channels:3d}/{total_channels} "
               f"({outlier_channel_pct:5.1f}%) | top-1% mass: {top_1pct_concentration:5.1f}%")
 
-os.makedirs("/home/ayush.thakar/thesis/experiments/results", exist_ok=True)
-results_path = "/home/ayush.thakar/thesis/experiments/results/activation_stats.json"
+os.makedirs("/home/ayush.thakar/thesis/experiments/quantization/results", exist_ok=True)
+results_path = "/home/ayush.thakar/thesis/experiments/quantization/results/03_01_activation_stats.json"
 with open(results_path, "w") as f:
     json.dump(activation_stats, f, indent=2)
 print(f"\nResults saved to {results_path}")
@@ -138,6 +138,6 @@ axes[1, 1].set_xlabel("Layer Index")
 axes[1, 1].set_ylabel("% of Total Magnitude")
 
 plt.tight_layout()
-plot_path = "/home/ayush.thakar/thesis/experiments/results/activation_stats.png"
+plot_path = "/home/ayush.thakar/thesis/experiments/quantization/results/03_01_activation_stats.png"
 plt.savefig(plot_path, dpi=150)
 print(f"Plot saved to {plot_path}")

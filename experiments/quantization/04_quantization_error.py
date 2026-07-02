@@ -89,8 +89,8 @@ with torch.no_grad():
             msg += f" | {n_bits}bit MSE: {row[f'mse_{n_bits}bit']:.6e}"
         print(msg)
 
-os.makedirs("/home/ayush.thakar/thesis/experiments/results", exist_ok=True)
-results_path = "/home/ayush.thakar/thesis/experiments/results/quantization_error.json"
+os.makedirs("/home/ayush.thakar/thesis/experiments/quantization/results", exist_ok=True)
+results_path = "/home/ayush.thakar/thesis/experiments/quantization/results/04_quantization_error.json"
 with open(results_path, "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nResults saved to {results_path}")
@@ -117,6 +117,6 @@ lines2, labels2 = ax2.get_legend_handles_labels()
 ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper right")
 plt.xticks(layers)
 plt.tight_layout()
-plot_path = "/home/ayush.thakar/thesis/experiments/results/quantization_error.png"
+plot_path = "/home/ayush.thakar/thesis/experiments/quantization/results/04_quantization_error.png"
 plt.savefig(plot_path, dpi=150)
 print(f"Plot saved to {plot_path}")

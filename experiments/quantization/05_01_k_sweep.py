@@ -7,11 +7,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
 PROMPT = "Hello, my name is"
 N_BITS = 4
-PROTECT_K = 8  # number of top outlier channels to keep in full precision
+K_VALUES = [0, 2, 4, 8, 16, 32, 64, 128]
+TEST_LAYERS = [1, 3, 10, 20]
 
 
 def quantize_dequantize(x, n_bits):
-    # symmetric uniform per-tensor quantization
     absmax = x.abs().max()
     if absmax == 0:
         return x.clone()
@@ -23,20 +23,16 @@ def quantize_dequantize(x, n_bits):
 
 
 def quantize_protected(hidden, n_bits, protect_k):
-    # hidden shape: [1, seq_len, hidden_dim]
-    # find top-k channels by max abs value across tokens
-    per_channel_max = hidden.abs().max(dim=1).values.flatten()  # [hidden_dim]
+    x = hidden.float()
+    if protect_k == 0:
+        x_hat = quantize_dequantize(x.flatten(), n_bits).reshape(x.shape)
+        return x_hat
+    per_channel_max = hidden.abs().max(dim=1).values.flatten()
     protect_idx = torch.argsort(per_channel_max, descending=True)[:protect_k]
-
-    # mask: which elements belong to protected channels
     hidden_dim = hidden.shape[-1]
     protect_mask = torch.zeros(hidden_dim, dtype=torch.bool, device=hidden.device)
     protect_mask[protect_idx] = True
-
-    # quantize everything, then restore protected channels to original
-    x = hidden.float()
     x_hat = quantize_dequantize(x.flatten(), n_bits).reshape(x.shape)
-    # restore protected channels (full precision)
     x_hat[..., protect_mask] = x[..., protect_mask]
     return x_hat
 
@@ -70,8 +66,8 @@ with torch.no_grad():
         )
 print("Warmup done.\n")
 
-results = []
-
+# capture each test layer's activation
+captured = {}
 with torch.no_grad():
     hidden_states = model.model.embed_tokens(input_ids)
     position_ids = torch.arange(input_ids.shape[1]).unsqueeze(0).to("cuda")
@@ -86,50 +82,42 @@ with torch.no_grad():
             past_key_values=None,
             use_cache=False,
         )
+        if i in TEST_LAYERS:
+            captured[i] = hidden_states.clone()
 
-        x = hidden_states.float()
-        x_flat = x.flatten()
+hidden_dim = model.config.hidden_size
+results = {}
 
-        # naive: quantize everything
-        x_hat_naive = quantize_dequantize(x_flat, N_BITS)
-        mse_naive = ((x_flat - x_hat_naive) ** 2).mean().item()
+for layer_idx in TEST_LAYERS:
+    hidden = captured[layer_idx]
+    x = hidden.float()
+    layer_curve = []
+    print(f"\n=== Layer {layer_idx} ===")
+    for k in K_VALUES:
+        x_hat = quantize_protected(hidden, N_BITS, k)
+        mse = ((x - x_hat) ** 2).mean().item()
+        pct = 100.0 * k / hidden_dim
+        layer_curve.append({"k": k, "mse": mse, "pct_channels": pct})
+        print(f"K={k:3d} ({pct:4.1f}% channels protected) | MSE: {mse:.4e}")
+    results[layer_idx] = layer_curve
 
-        # protected: keep top-K channels full precision
-        x_hat_prot = quantize_protected(hidden_states, N_BITS, PROTECT_K)
-        mse_prot = ((x - x_hat_prot) ** 2).mean().item()
-
-        improvement = mse_naive / (mse_prot + 1e-12)
-
-        results.append({
-            "layer": i,
-            "mse_naive": mse_naive,
-            "mse_protected": mse_prot,
-            "improvement_ratio": improvement,
-        })
-
-        print(f"Layer {i:02d} | naive MSE: {mse_naive:.4e} | protected MSE: {mse_prot:.4e} | "
-              f"improvement: {improvement:8.1f}x")
-
-os.makedirs("/home/ayush.thakar/thesis/experiments/results", exist_ok=True)
-results_path = "/home/ayush.thakar/thesis/experiments/results/protected_quant.json"
+os.makedirs("/home/ayush.thakar/thesis/experiments/quantization/results", exist_ok=True)
+results_path = "/home/ayush.thakar/thesis/experiments/quantization/results/05_01_k_sweep.json"
 with open(results_path, "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nResults saved to {results_path}")
 
-layers = [r["layer"] for r in results]
-naive = [r["mse_naive"] for r in results]
-prot = [r["mse_protected"] for r in results]
-
-plt.figure(figsize=(13, 6))
-plt.plot(layers, naive, marker="o", label=f"Naive {N_BITS}-bit (all channels)")
-plt.plot(layers, prot, marker="s", label=f"Protected {N_BITS}-bit (top-{PROTECT_K} kept full)")
+plt.figure(figsize=(12, 6))
+for layer_idx in TEST_LAYERS:
+    ks = [pt["k"] for pt in results[layer_idx]]
+    mses = [pt["mse"] for pt in results[layer_idx]]
+    plt.plot(ks, mses, marker="o", label=f"Layer {layer_idx}")
 plt.yscale("log")
-plt.xlabel("Layer Index")
+plt.xlabel("K (channels kept in full precision)")
 plt.ylabel("MSE (log scale)")
-plt.title(f"Quantization Error: Naive vs Protecting Top-{PROTECT_K} Channels ({N_BITS}-bit)")
+plt.title(f"Quantization Error vs Protected Channels ({N_BITS}-bit)")
 plt.legend()
-plt.xticks(layers)
 plt.tight_layout()
-plot_path = "/home/ayush.thakar/thesis/experiments/results/protected_quant.png"
+plot_path = "/home/ayush.thakar/thesis/experiments/quantization/results/05_01_k_sweep.png"
 plt.savefig(plot_path, dpi=150)
 print(f"Plot saved to {plot_path}")

@@ -100,8 +100,8 @@ with torch.no_grad():
         flag = "same" if top1_same else f"CHANGED -> '{tokenizer.decode([dmg_top1])}'"
         print(f"Quantize layer {layer_idx:02d} | KL: {kl:.6f} | top-1: {flag}")
 
-os.makedirs("/home/ayush.thakar/thesis/experiments/results", exist_ok=True)
-results_path = "/home/ayush.thakar/thesis/experiments/results/06_endtoend_validation.json"
+os.makedirs("/home/ayush.thakar/thesis/experiments/quantization/results", exist_ok=True)
+results_path = "/home/ayush.thakar/thesis/experiments/quantization/results/06_endtoend_validation.json"
 with open(results_path, "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nResults saved to {results_path}")
@@ -118,6 +118,6 @@ plt.title(f"End-to-End Output Damage from Quantizing Each Layer ({N_BITS}-bit)\n
           f"(red = top-1 next token changed)")
 plt.xticks(layers)
 plt.tight_layout()
-plot_path = "/home/ayush.thakar/thesis/experiments/results/06_endtoend_validation.png"
+plot_path = "/home/ayush.thakar/thesis/experiments/quantization/results/06_endtoend_validation.png"
 plt.savefig(plot_path, dpi=150)
 print(f"Plot saved to {plot_path}")
