@@ -1,0 +1,146 @@
+[
+  {
+    "layer": 0,
+    "kl_divergence": 0.18175435066223145,
+    "top1_same": false,
+    "dmg_top1_token": " John"
+  },
+  {
+    "layer": 1,
+    "kl_divergence": 0.2837426960468292,
+    "top1_same": false,
+    "dmg_top1_token": " John"
+  },
+  {
+    "layer": 2,
+    "kl_divergence": 9.50658893585205,
+    "top1_same": false,
+    "dmg_top1_token": "\uff0c"
+  },
+  {
+    "layer": 3,
+    "kl_divergence": 5.779604434967041,
+    "top1_same": false,
+    "dmg_top1_token": "::"
+  },
+  {
+    "layer": 4,
+    "kl_divergence": 9.22825813293457,
+    "top1_same": false,
+    "dmg_top1_token": "\u868a"
+  },
+  {
+    "layer": 5,
+    "kl_divergence": 8.716184616088867,
+    "top1_same": false,
+    "dmg_top1_token": ","
+  },
+  {
+    "layer": 6,
+    "kl_divergence": 6.2353997230529785,
+    "top1_same": false,
+    "dmg_top1_token": " entries"
+  },
+  {
+    "layer": 7,
+    "kl_divergence": 10.964223861694336,
+    "top1_same": false,
+    "dmg_top1_token": "ation"
+  },
+  {
+    "layer": 8,
+    "kl_divergence": 11.090784072875977,
+    "top1_same": false,
+    "dmg_top1_token": "\u81ea\u5df1"
+  },
+  {
+    "layer": 9,
+    "kl_divergence": 11.50704574584961,
+    "top1_same": false,
+    "dmg_top1_token": "__"
+  },
+  {
+    "layer": 10,
+    "kl_divergence": 9.012157440185547,
+    "top1_same": false,
+    "dmg_top1_token": "\uff0e"
+  },
+  {
+    "layer": 11,
+    "kl_divergence": 8.195592880249023,
+    "top1_same": false,
+    "dmg_top1_token": "3"
+  },
+  {
+    "layer": 12,
+    "kl_divergence": 10.751251220703125,
+    "top1_same": false,
+    "dmg_top1_token": "ns"
+  },
+  {
+    "layer": 13,
+    "kl_divergence": 8.17988395690918,
+    "top1_same": false,
+    "dmg_top1_token": "1"
+  },
+  {
+    "layer": 14,
+    "kl_divergence": 7.108288764953613,
+    "top1_same": false,
+    "dmg_top1_token": "\uff0c"
+  },
+  {
+    "layer": 15,
+    "kl_divergence": 7.430631637573242,
+    "top1_same": false,
+    "dmg_top1_token": " which"
+  },
+  {
+    "layer": 16,
+    "kl_divergence": 9.19239616394043,
+    "top1_same": false,
+    "dmg_top1_token": ":"
+  },
+  {
+    "layer": 17,
+    "kl_divergence": 7.783198356628418,
+    "top1_same": false,
+    "dmg_top1_token": "6"
+  },
+  {
+    "layer": 18,
+    "kl_divergence": 6.056403636932373,
+    "top1_same": false,
+    "dmg_top1_token": " ("
+  },
+  {
+    "layer": 19,
+    "kl_divergence": 7.084525108337402,
+    "top1_same": false,
+    "dmg_top1_token": " c"
+  },
+  {
+    "layer": 20,
+    "kl_divergence": 6.499378681182861,
+    "top1_same": false,
+    "dmg_top1_token": " the"
+  },
+  {
+    "layer": 21,
+    "kl_divergence": 0.9681472182273865,
+    "top1_same": false,
+    "dmg_top1_token": " "
+  },
+  {
+    "layer": 22,
+    "kl_divergence": 1.0751423835754395,
+    "top1_same": false,
+    "dmg_top1_token": " \""
+  },
+  {
+    "layer": 23,
+    "kl_divergence": 1.4068331718444824,
+    "top1_same": false,
+    "dmg_top1_token": " "
+  }
+]
