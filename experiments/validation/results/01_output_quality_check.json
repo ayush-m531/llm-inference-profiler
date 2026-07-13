@@ -1,0 +1,796 @@
+{
+  "prompt": "The capital of France is",
+  "reference_text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+  "splits": {
+    "1": {
+      "grouped(8, 8, 8)": {
+        "kl": 0.0006936185527592897,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+        "top5": [
+          [
+            " Paris",
+            0.28627943992614746
+          ],
+          [
+            " ______",
+            0.11933901906013489
+          ],
+          [
+            ":\n",
+            0.06799732893705368
+          ],
+          [
+            ":\n\n",
+            0.05637175962328911
+          ],
+          [
+            " __",
+            0.05295637249946594
+          ]
+        ]
+      },
+      "grouped(8, 8, 4)": {
+        "kl": 0.0032023880630731583,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the south of",
+        "top5": [
+          [
+            " Paris",
+            0.31311702728271484
+          ],
+          [
+            " ______",
+            0.115189328789711
+          ],
+          [
+            ":\n",
+            0.061656393110752106
+          ],
+          [
+            ":\n\n",
+            0.05441157519817352
+          ],
+          [
+            " located",
+            0.04801805317401886
+          ]
+        ]
+      },
+      "grouped(8, 4, 4)": {
+        "kl": 0.00875638797879219,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is also the capital of France",
+        "top5": [
+          [
+            " Paris",
+            0.3299875855445862
+          ],
+          [
+            " ______",
+            0.10713128745555878
+          ],
+          [
+            ":\n",
+            0.057343240827322006
+          ],
+          [
+            ":\n\n",
+            0.05060523748397827
+          ],
+          [
+            " located",
+            0.04465896263718605
+          ]
+        ]
+      },
+      "grouped(4, 4, 4)": {
+        "kl": 0.005218038335442543,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the south of",
+        "top5": [
+          [
+            " Paris",
+            0.31352412700653076
+          ],
+          [
+            " ______",
+            0.11533910036087036
+          ],
+          [
+            ":\n",
+            0.05799613520503044
+          ],
+          [
+            ":\n\n",
+            0.05118140950798988
+          ],
+          [
+            " located",
+            0.04808048531413078
+          ]
+        ]
+      },
+      "uniform8": {
+        "kl": 0.0012192941503599286,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+        "top5": [
+          [
+            " Paris",
+            0.2881433367729187
+          ],
+          [
+            " ______",
+            0.12011601030826569
+          ],
+          [
+            ":\n",
+            0.06429347395896912
+          ],
+          [
+            ":\n\n",
+            0.05673878267407417
+          ],
+          [
+            " __",
+            0.050071798264980316
+          ]
+        ]
+      },
+      "uniform4": {
+        "kl": 2.273444652557373,
+        "text": "The capital of France is the capital of the capital of the capital of the capital of the capital of the capital of the capital",
+        "top5": [
+          [
+            " the",
+            0.27296772599220276
+          ],
+          [
+            " a",
+            0.08325044810771942
+          ],
+          [
+            " located",
+            0.044560756534338
+          ],
+          [
+            " ",
+            0.034703947603702545
+          ],
+          [
+            " in",
+            0.03260134533047676
+          ]
+        ]
+      }
+    },
+    "3": {
+      "grouped(8, 8, 8)": {
+        "kl": 0.001338195987045765,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is also the capital of France",
+        "top5": [
+          [
+            " Paris",
+            0.2989042401313782
+          ],
+          [
+            " ______",
+            0.1246018260717392
+          ],
+          [
+            ":\n",
+            0.06265373528003693
+          ],
+          [
+            ":\n\n",
+            0.05194176733493805
+          ],
+          [
+            " __",
+            0.05194176733493805
+          ]
+        ]
+      },
+      "grouped(8, 8, 4)": {
+        "kl": 0.5676623582839966,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+        "top5": [
+          [
+            " Paris",
+            0.3596785068511963
+          ],
+          [
+            " located",
+            0.1925220489501953
+          ],
+          [
+            " the",
+            0.08543113619089127
+          ],
+          [
+            " in",
+            0.045727990567684174
+          ],
+          [
+            " a",
+            0.02952421084046364
+          ]
+        ]
+      },
+      "grouped(8, 4, 4)": {
+        "kl": 0.6753064393997192,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+        "top5": [
+          [
+            " Paris",
+            0.3421002924442291
+          ],
+          [
+            " located",
+            0.16159674525260925
+          ],
+          [
+            " in",
+            0.09801337867975235
+          ],
+          [
+            " the",
+            0.09207504987716675
+          ],
+          [
+            " a",
+            0.024781662970781326
+          ]
+        ]
+      },
+      "grouped(4, 4, 4)": {
+        "kl": 1.2438294887542725,
+        "text": "The capital of France is Paris. It is the capital of France, the largest city of France, and the largest city of",
+        "top5": [
+          [
+            " Paris",
+            0.1913047581911087
+          ],
+          [
+            " located",
+            0.13996154069900513
+          ],
+          [
+            " the",
+            0.13148170709609985
+          ],
+          [
+            " in",
+            0.05834465101361275
+          ],
+          [
+            " a",
+            0.04836941882967949
+          ]
+        ]
+      },
+      "uniform8": {
+        "kl": 8.384207725524902,
+        "text": "The capital of France is::\u662f =\u7684\u7684\u3002\u300d\u300d\u300d&q&q&q&q&q&q&q&q&q&q&q",
+        "top5": [
+          [
+            "::",
+            0.11473434418439865
+          ],
+          [
+            ":",
+            0.04493061453104019
+          ],
+          [
+            "\u7684",
+            0.03965112939476967
+          ],
+          [
+            "\u662f",
+            0.03724878653883934
+          ],
+          [
+            "y",
+            0.034991998225450516
+          ]
+        ]
+      },
+      "uniform4": {
+        "kl": 6.881487846374512,
+        "text": "The capital of France is::.erpf-fe_pag_pag_pag_pag\u75c5\u75c5\u75c5Pts@s@s.s.s.s()()",
+        "top5": [
+          [
+            "::",
+            0.04652094841003418
+          ],
+          [
+            "\u7684",
+            0.04105459153652191
+          ],
+          [
+            "\n",
+            0.02490087039768696
+          ],
+          [
+            ",",
+            0.023392200469970703
+          ],
+          [
+            ":",
+            0.016077209264039993
+          ]
+        ]
+      }
+    },
+    "10": {
+      "grouped(8, 8, 8)": {
+        "kl": 0.0026384983211755753,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the third largest in the world. It is located",
+        "top5": [
+          [
+            " Paris",
+            0.3156963288784027
+          ],
+          [
+            " ______",
+            0.11613819748163223
+          ],
+          [
+            ":\n",
+            0.06216428801417351
+          ],
+          [
+            ":\n\n",
+            0.05153600871562958
+          ],
+          [
+            " __",
+            0.04841360077261925
+          ]
+        ]
+      },
+      "grouped(8, 8, 4)": {
+        "kl": 0.0834408551454544,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the center of",
+        "top5": [
+          [
+            " Paris",
+            0.39412543177604675
+          ],
+          [
+            " ______",
+            0.11291882395744324
+          ],
+          [
+            " the",
+            0.060441091656684875
+          ],
+          [
+            " __",
+            0.05333907529711723
+          ],
+          [
+            " ____",
+            0.044219642877578735
+          ]
+        ]
+      },
+      "grouped(8, 4, 4)": {
+        "kl": 0.1811385601758957,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the center of",
+        "top5": [
+          [
+            " Paris",
+            0.5191022157669067
+          ],
+          [
+            " ______",
+            0.0619979202747345
+          ],
+          [
+            " ____",
+            0.048284027725458145
+          ],
+          [
+            " __",
+            0.03760364279150963
+          ],
+          [
+            " the",
+            0.03760364279150963
+          ]
+        ]
+      },
+      "grouped(4, 4, 4)": {
+        "kl": 0.12477551400661469,
+        "text": "The capital of France is Paris, and it is the largest city in the world. The capital of France is Paris, and",
+        "top5": [
+          [
+            " Paris",
+            0.25428056716918945
+          ],
+          [
+            ":\n",
+            0.07755119353532791
+          ],
+          [
+            " ______",
+            0.06843869388103485
+          ],
+          [
+            ":\n\n",
+            0.06429219990968704
+          ],
+          [
+            " the",
+            0.050070811063051224
+          ]
+        ]
+      },
+      "uniform8": {
+        "kl": 11.120448112487793,
+        "text": "The capital of France is,\u8def, will will will_X,,,,,,,,,,,,,",
+        "top5": [
+          [
+            ",",
+            0.21151486039161682
+          ],
+          [
+            " ",
+            0.06060001999139786
+          ],
+          [
+            " satisfied",
+            0.02689109370112419
+          ],
+          [
+            " the",
+            0.02229350060224533
+          ],
+          [
+            " interested",
+            0.019673945382237434
+          ]
+        ]
+      },
+      "uniform4": {
+        "kl": 10.576641082763672,
+        "text": "The capital of France is\uff0e\uff0e\uff0e\uff0e\uff0c\uff0c\uff0c\uff0c\uff0c\uff0c\uff0c\uff0c,,,,,,,,",
+        "top5": [
+          [
+            "\uff0e",
+            0.44682472944259644
+          ],
+          [
+            "\uff0c",
+            0.307097852230072
+          ],
+          [
+            "\uff1b",
+            0.012675442732870579
+          ],
+          [
+            "\u3002",
+            0.009273551404476166
+          ],
+          [
+            "v",
+            0.008711695671081543
+          ]
+        ]
+      }
+    },
+    "20": {
+      "grouped(8, 8, 8)": {
+        "kl": 0.001468650996685028,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the third largest in the world. It is located",
+        "top5": [
+          [
+            " Paris",
+            0.30376574397087097
+          ],
+          [
+            " ______",
+            0.12662839889526367
+          ],
+          [
+            ":\n",
+            0.0636727586388588
+          ],
+          [
+            ":\n\n",
+            0.05278656631708145
+          ],
+          [
+            " __",
+            0.05278656631708145
+          ]
+        ]
+      },
+      "grouped(8, 8, 4)": {
+        "kl": 0.010677248239517212,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the south of",
+        "top5": [
+          [
+            " Paris",
+            0.2788901925086975
+          ],
+          [
+            " ______",
+            0.10259798169136047
+          ],
+          [
+            ":\n",
+            0.0705144852399826
+          ],
+          [
+            ":\n\n",
+            0.054916735738515854
+          ],
+          [
+            " the",
+            0.05158950388431549
+          ]
+        ]
+      },
+      "grouped(8, 4, 4)": {
+        "kl": 0.01647617667913437,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is also the capital of the",
+        "top5": [
+          [
+            " Paris",
+            0.2591954171657562
+          ],
+          [
+            " ______",
+            0.10804872959852219
+          ],
+          [
+            ":\n\n",
+            0.061564311385154724
+          ],
+          [
+            ":\n",
+            0.061564311385154724
+          ],
+          [
+            " ____",
+            0.051038600504398346
+          ]
+        ]
+      },
+      "grouped(4, 4, 4)": {
+        "kl": 0.114180788397789,
+        "text": "The capital of France is Paris. The capital of the United Kingdom is London. The capital of the United States is Washington D",
+        "top5": [
+          [
+            " Paris",
+            0.44157618284225464
+          ],
+          [
+            " ______",
+            0.11164794862270355
+          ],
+          [
+            " the",
+            0.046541787683963776
+          ],
+          [
+            ":\n\n",
+            0.036246780306100845
+          ],
+          [
+            ":\n",
+            0.036246780306100845
+          ]
+        ]
+      },
+      "uniform8": {
+        "kl": 10.017181396484375,
+        "text": "The capital of France is, the     0.1000,,0,,,,",
+        "top5": [
+          [
+            ",",
+            0.6472370028495789
+          ],
+          [
+            ".\n",
+            0.06020241975784302
+          ],
+          [
+            " in",
+            0.053128451108932495
+          ],
+          [
+            ".",
+            0.046885695308446884
+          ],
+          [
+            " and",
+            0.03651461750268936
+          ]
+        ]
+      },
+      "uniform4": {
+        "kl": 7.647695541381836,
+        "text": "The capital of France is the the the the the the the the the the the the the the the the the the the the",
+        "top5": [
+          [
+            " the",
+            0.04448694363236427
+          ],
+          [
+            ".\n",
+            0.02698269486427307
+          ],
+          [
+            "\n",
+            0.021014144644141197
+          ],
+          [
+            " to",
+            0.017421336844563484
+          ],
+          [
+            ".",
+            0.015374276787042618
+          ]
+        ]
+      }
+    },
+    "22": {
+      "grouped(8, 8, 8)": {
+        "kl": 0.001581970602273941,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the second largest city in the world. It is",
+        "top5": [
+          [
+            " Paris",
+            0.31559208035469055
+          ],
+          [
+            " ______",
+            0.11609984934329987
+          ],
+          [
+            ":\n",
+            0.0661516934633255
+          ],
+          [
+            ":\n\n",
+            0.054841674864292145
+          ],
+          [
+            " __",
+            0.051518991589546204
+          ]
+        ]
+      },
+      "grouped(8, 8, 4)": {
+        "kl": 0.00781654380261898,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is also the capital of France",
+        "top5": [
+          [
+            " Paris",
+            0.25667089223861694
+          ],
+          [
+            " ______",
+            0.12124274671077728
+          ],
+          [
+            ":\n",
+            0.0735374465584755
+          ],
+          [
+            ":\n\n",
+            0.06908203661441803
+          ],
+          [
+            " __",
+            0.057271018624305725
+          ]
+        ]
+      },
+      "grouped(8, 4, 4)": {
+        "kl": 0.01403271034359932,
+        "text": "The capital of France is Paris. It is the largest city in Europe and the third largest in the world. It is located",
+        "top5": [
+          [
+            " Paris",
+            0.24175849556922913
+          ],
+          [
+            " ______",
+            0.1294040083885193
+          ],
+          [
+            ":\n",
+            0.0737321749329567
+          ],
+          [
+            ":\n\n",
+            0.06506841629743576
+          ],
+          [
+            " __",
+            0.06506841629743576
+          ]
+        ]
+      },
+      "grouped(4, 4, 4)": {
+        "kl": 0.03398067131638527,
+        "text": "The capital of France is Paris. The capital of the United Kingdom is London. The capital of the United States is Washington,",
+        "top5": [
+          [
+            " Paris",
+            0.2057490348815918
+          ],
+          [
+            " ______",
+            0.12479309737682343
+          ],
+          [
+            ":\n",
+            0.08057247847318649
+          ],
+          [
+            ":\n\n",
+            0.07110496610403061
+          ],
+          [
+            " __",
+            0.07110496610403061
+          ]
+        ]
+      },
+      "uniform8": {
+        "kl": 0.0063424245454370975,
+        "text": "The capital of France is Paris. It is the largest city in the world by population. It is located in the south of",
+        "top5": [
+          [
+            " Paris",
+            0.31082600355148315
+          ],
+          [
+            " ______",
+            0.11434650421142578
+          ],
+          [
+            ":\n",
+            0.07858911901712418
+          ],
+          [
+            ":\n\n",
+            0.05749702826142311
+          ],
+          [
+            " __",
+            0.05074094980955124
+          ]
+        ]
+      },
+      "uniform4": {
+        "kl": 4.214168548583984,
+        "text": "The capital of France is  letompe-manovandandjsum, the andthe.  A,",
+        "top5": [
+          [
+            " ",
+            0.2203672230243683
+          ],
+          [
+            "\u00a0",
+            0.1179540827870369
+          ],
+          [
+            " (",
+            0.09186272323131561
+          ],
+          [
+            " the",
+            0.09186272323131561
+          ],
+          [
+            " a",
+            0.0631362646818161
+          ]
+        ]
+      }
+    }
+  }
+}
