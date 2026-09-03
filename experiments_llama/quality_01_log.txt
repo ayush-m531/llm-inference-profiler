@@ -1,0 +1,170 @@
+nohup: ignoring input
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:56,  5.11it/s]Loading weights:   2%|▏         | 6/291 [00:00<00:20, 14.12it/s]Loading weights:   5%|▍         | 14/291 [00:00<00:09, 30.38it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:06, 41.25it/s]Loading weights:  10%|▉         | 28/291 [00:00<00:06, 43.01it/s]Loading weights:  12%|█▏        | 34/291 [00:01<00:06, 40.20it/s]Loading weights:  14%|█▎        | 40/291 [00:01<00:05, 44.68it/s]Loading weights:  15%|█▌        | 45/291 [00:01<00:06, 39.85it/s]Loading weights:  17%|█▋        | 50/291 [00:01<00:05, 40.18it/s]Loading weights:  19%|█▉        | 55/291 [00:01<00:05, 42.54it/s]Loading weights:  21%|██        | 60/291 [00:01<00:06, 36.43it/s]Loading weights:  23%|██▎       | 67/291 [00:01<00:05, 44.06it/s]Loading weights:  25%|██▍       | 72/291 [00:01<00:05, 41.20it/s]Loading weights:  26%|██▋       | 77/291 [00:02<00:05, 39.46it/s]Loading weights:  28%|██▊       | 82/291 [00:02<00:04, 41.99it/s]Loading weights:  30%|██▉       | 87/291 [00:02<00:05, 36.01it/s]Loading weights:  32%|███▏      | 94/291 [00:02<00:04, 43.59it/s]Loading weights:  34%|███▍      | 99/291 [00:02<00:04, 40.90it/s]Loading weights:  36%|███▌      | 104/291 [00:02<00:04, 39.10it/s]Loading weights:  38%|███▊      | 110/291 [00:02<00:04, 43.68it/s]Loading weights:  40%|███▉      | 115/291 [00:03<00:04, 36.95it/s]Loading weights:  42%|████▏     | 122/291 [00:03<00:04, 39.24it/s]Loading weights:  44%|████▎     | 127/291 [00:03<00:03, 41.50it/s]Loading weights:  45%|████▌     | 132/291 [00:03<00:04, 35.96it/s]Loading weights:  48%|████▊     | 139/291 [00:03<00:03, 43.33it/s]Loading weights:  49%|████▉     | 144/291 [00:03<00:03, 40.59it/s]Loading weights:  51%|█████     | 149/291 [00:03<00:03, 39.16it/s]Loading weights:  53%|█████▎    | 155/291 [00:03<00:03, 43.83it/s]Loading weights:  55%|█████▍    | 160/291 [00:04<00:03, 37.96it/s]Loading weights:  57%|█████▋    | 167/291 [00:04<00:03, 39.93it/s]Loading weights:  59%|█████▉    | 173/291 [00:04<00:02, 43.96it/s]Loading weights:  61%|██████    | 178/291 [00:04<00:02, 37.97it/s]Loading weights:  63%|██████▎   | 184/291 [00:04<00:02, 42.87it/s]Loading weights:  65%|██████▍   | 189/291 [00:04<00:02, 40.48it/s]Loading weights:  67%|██████▋   | 194/291 [00:05<00:02, 38.85it/s]Loading weights:  69%|██████▊   | 200/291 [00:05<00:02, 43.44it/s]Loading weights:  70%|███████   | 205/291 [00:05<00:02, 37.48it/s]Loading weights:  73%|███████▎  | 211/291 [00:05<00:01, 42.62it/s]Loading weights:  74%|███████▍  | 216/291 [00:05<00:01, 38.57it/s]Loading weights:  76%|███████▌  | 221/291 [00:05<00:01, 39.14it/s]Loading weights:  78%|███████▊  | 227/291 [00:05<00:01, 43.79it/s]Loading weights:  80%|███████▉  | 232/291 [00:05<00:01, 37.67it/s]Loading weights:  82%|████████▏ | 239/291 [00:06<00:01, 39.66it/s]Loading weights:  84%|████████▍ | 245/291 [00:06<00:01, 43.82it/s]Loading weights:  86%|████████▌ | 250/291 [00:06<00:01, 37.77it/s]Loading weights:  88%|████████▊ | 257/291 [00:06<00:00, 39.66it/s]Loading weights:  90%|█████████ | 262/291 [00:06<00:00, 41.55it/s]Loading weights:  92%|█████████▏| 267/291 [00:06<00:00, 36.51it/s]Loading weights:  94%|█████████▍| 274/291 [00:06<00:00, 43.58it/s]Loading weights:  96%|█████████▌| 279/291 [00:07<00:00, 41.02it/s]Loading weights:  98%|█████████▊| 284/291 [00:07<00:00, 39.21it/s]Loading weights:  99%|█████████▉| 289/291 [00:07<00:00, 41.73it/s]Loading weights: 100%|██████████| 291/291 [00:07<00:00, 39.62it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+Model: meta-llama/Llama-3.1-8B-Instruct
+Layers: 32  |  perplexity text: 256 tokens
+Group boundaries: top=5, shoulder<=72, mid<=1312
+Split points: [1, 7, 11]
+Text domain: narrative/historical (06 used technical prose)
+Reference (uncompressed) perplexity: 5.5486
+
+==============================================================================
+SPLIT AT LAYER 1
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        5.5486      0.00%
+grouped(4, 4, 4)      526220   25.1%     3.0692      157.1866   2732.90%
+uniform4              524292   25.0%    11.9435  1173365.5000 21146941.64%
+grouped(8, 4, 4)      534796   25.5%     0.3562        8.6907     56.63%
+grouped(8, 8, 4)      693516   33.1%     0.0064        5.5486      0.00%
+uniform8             1048580   50.0%    11.3773   663844.8125 11964078.16%
+grouped(8, 8, 8)     1049868   50.1%     0.0041        5.5524      0.07%
+
+==============================================================================
+SPLIT AT LAYER 7
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        5.5486      0.00%
+grouped(4, 4, 4)      526220   25.1%     0.3812        8.1596     47.06%
+uniform4              524292   25.0%     8.4483    38223.0195 688776.39%
+grouped(8, 4, 4)      534796   25.5%     0.0229        5.7156      3.01%
+grouped(8, 8, 4)      693516   33.1%     0.0031        5.4799     -1.24%
+uniform8             1048580   50.0%     8.3737    32478.6758 585248.65%
+grouped(8, 8, 8)     1049868   50.1%     0.0007        5.5607      0.22%
+
+==============================================================================
+SPLIT AT LAYER 11
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        5.5486      0.00%
+grouped(4, 4, 4)      526220   25.1%     0.0929        6.2384     12.43%
+uniform4              524292   25.0%     8.3863    35486.2031 639451.97%
+grouped(8, 4, 4)      534796   25.5%     0.0335        5.8766      5.91%
+grouped(8, 8, 4)      693516   33.1%     0.0053        5.6200      1.29%
+uniform8             1048580   50.0%     9.2508    94830.6094 1708989.66%
+grouped(8, 8, 8)     1049868   50.1%     0.0006        5.5491      0.01%
+
+==============================================================================
+GENERATED OUTPUT
+==============================================================================
+Prompt: "The main causes of the Industrial Revolution were"
+
+--- split at layer 1 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [grouped(4, 4, 4)]  KL=3.0692  PPL rise=+2732.90%
+  the development of the steam engine, the spinning jenny, and the power loom.. The main cause of the Industrial Revolution was the development of the steam engine, the spinning jenny, and
+
+  [uniform4]  KL=11.9435  PPL rise=+21146941.64%
+  "))00??? I I I I Let
+
+  [grouped(8, 4, 4)]  KL=0.3562  PPL rise=+56.63%
+  the invention of the steam engine, the development of the factory system, and the availability of natural resources. The steam engine, invented by James Watt, allowed for the mechanization of industry, which increased
+
+  [grouped(8, 8, 4)]  KL=0.0064  PPL rise=+0.00%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [uniform8]  KL=11.3773  PPL rise=+11964078.16%
+  /////ははは==はは  The The   ? 
+ The The The The The The}}}{{{{{{{{{~~
+
+  [grouped(8, 8, 8)]  KL=0.0041  PPL rise=+0.07%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+--- split at layer 7 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [grouped(4, 4, 4)]  KL=0.3812  PPL rise=+47.06%
+  the availability of natural resources, technological advancements, and the growth of a large and educated workforce. The Industrial Revolution was a period of significant economic growth and development in the 18th and 19th
+
+  [uniform4]  KL=8.4483  PPL rise=+688776.39%
+  ( ( ( ( going (" was went went went went went went went went went with with with with went went went went went went went went went went went went with with with with with with with with
+
+  [grouped(8, 4, 4)]  KL=0.0229  PPL rise=+3.01%
+  the invention of the steam engine, the development of new machines and manufacturing techniques, and the growth of trade and commerce. The steam engine, invented by James Watt in 1769, was a key
+
+  [grouped(8, 8, 4)]  KL=0.0031  PPL rise=-1.24%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [uniform8]  KL=8.3737  PPL rise=+585248.65%
+  math>>>|||||||||>>>>>>>>+>>++============;
+;
+
+  [grouped(8, 8, 8)]  KL=0.0007  PPL rise=+0.22%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+--- split at layer 11 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [grouped(4, 4, 4)]  KL=0.0929  PPL rise=+12.43%
+  the development of new technologies, the growth of a large and mobile workforce, and the availability of natural resources. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [uniform4]  KL=8.3863  PPL rise=+639451.97%
+  ....
+
+
+
+
+
+ time time time
+
+  [grouped(8, 4, 4)]  KL=0.0335  PPL rise=+5.91%
+  the development of new technologies, the growth of cities, and the emergence of a new class of entrepreneurs. The Industrial Revolution was a period of significant economic, social, and political change in the late
+
+  [grouped(8, 8, 4)]  KL=0.0053  PPL rise=+1.29%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+  [uniform8]  KL=9.2508  PPL rise=+1708989.66%
+  in the the and= ( (=**** than****
+******
+****
+**
+**
+ than**
+**
+**
+ be]]]] be would would would would would is is a. would
+
+  [grouped(8, 8, 8)]  KL=0.0006  PPL rise=+0.01%
+  the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late
+
+==============================================================================
+SCHEME SELECTION AT DIFFERENT PERPLEXITY BUDGETS
+==============================================================================
+Cheapest scheme whose perplexity rise stays within each budget.
+
+Split L1:
+  <=   1.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0064
+  <=   3.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0064
+  <=   5.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0064
+  <=  10.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0064
+  <=  15.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0064
+
+Split L7:
+  <=   1.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0031
+  <=   3.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0031
+  <=   5.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0229
+  <=  10.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0229
+  <=  15.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0229
+
+Split L11:
+  <=   1.0% : grouped(8, 8, 8)   1049868 B ( 50.1% of fp16)  KL=0.0006
+  <=   3.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0053
+  <=   5.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0053
+  <=  10.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0335
+  <=  15.0% : grouped(4, 4, 4)    526220 B ( 25.1% of fp16)  KL=0.0929
+
+
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/06_01_quality_calibration.json
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/06_01_quality_calibration.txt

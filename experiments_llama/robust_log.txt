@@ -1,0 +1,74 @@
+nohup: ignoring input
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:02<10:59,  2.27s/it]Loading weights:   1%|          | 2/291 [00:04<12:02,  2.50s/it]Loading weights:   1%|▏         | 4/291 [00:05<04:56,  1.03s/it]Loading weights:   2%|▏         | 5/291 [00:05<03:48,  1.25it/s]Loading weights:   2%|▏         | 6/291 [00:05<03:02,  1.56it/s]Loading weights:   3%|▎         | 9/291 [00:05<01:24,  3.33it/s]Loading weights:   4%|▍         | 11/291 [00:06<01:01,  4.52it/s]Loading weights:   4%|▍         | 13/291 [00:06<00:52,  5.29it/s]Loading weights:   5%|▌         | 15/291 [00:06<01:00,  4.56it/s]Loading weights:   6%|▌         | 18/291 [00:07<00:39,  6.88it/s]Loading weights:   7%|▋         | 20/291 [00:07<00:33,  8.10it/s]Loading weights:   8%|▊         | 22/291 [00:07<00:33,  8.05it/s]Loading weights:   8%|▊         | 24/291 [00:08<00:46,  5.70it/s]Loading weights:  10%|▉         | 28/291 [00:08<00:30,  8.57it/s]Loading weights:  11%|█         | 31/291 [00:08<00:29,  8.93it/s]Loading weights:  11%|█▏        | 33/291 [00:09<00:39,  6.50it/s]Loading weights:  12%|█▏        | 36/291 [00:09<00:33,  7.67it/s]Loading weights:  14%|█▎        | 40/291 [00:09<00:29,  8.44it/s]Loading weights:  14%|█▍        | 42/291 [00:10<00:42,  5.80it/s]Loading weights:  15%|█▌        | 45/291 [00:10<00:32,  7.52it/s]Loading weights:  16%|█▌        | 47/291 [00:10<00:29,  8.31it/s]Loading weights:  17%|█▋        | 49/291 [00:11<00:32,  7.45it/s]Loading weights:  18%|█▊        | 51/291 [00:11<00:46,  5.17it/s]Loading weights:  19%|█▊        | 54/291 [00:12<00:37,  6.28it/s]Loading weights:  20%|█▉        | 58/291 [00:12<00:32,  7.26it/s]Loading weights:  20%|██        | 59/291 [00:12<00:38,  6.01it/s]Loading weights:  21%|██        | 60/291 [00:13<00:46,  4.97it/s]Loading weights:  22%|██▏       | 63/291 [00:13<00:31,  7.15it/s]Loading weights:  22%|██▏       | 65/291 [00:13<00:27,  8.16it/s]Loading weights:  23%|██▎       | 67/291 [00:13<00:32,  6.94it/s]Loading weights:  23%|██▎       | 68/291 [00:14<00:40,  5.55it/s]Loading weights:  24%|██▎       | 69/291 [00:14<00:48,  4.55it/s]Loading weights:  25%|██▍       | 72/291 [00:14<00:30,  7.10it/s]Loading weights:  25%|██▌       | 74/291 [00:15<00:26,  8.15it/s]Loading weights:  26%|██▌       | 76/291 [00:15<00:28,  7.47it/s]Loading weights:  26%|██▋       | 77/291 [00:15<00:39,  5.40it/s]Loading weights:  27%|██▋       | 78/291 [00:16<00:48,  4.43it/s]Loading weights:  28%|██▊       | 81/291 [00:16<00:29,  7.15it/s]Loading weights:  29%|██▊       | 83/291 [00:16<00:25,  8.31it/s]Loading weights:  29%|██▉       | 85/291 [00:16<00:25,  8.22it/s]Loading weights:  30%|██▉       | 87/291 [00:17<00:35,  5.83it/s]Loading weights:  31%|███▏      | 91/291 [00:17<00:24,  8.28it/s]Loading weights:  32%|███▏      | 94/291 [00:17<00:21,  9.18it/s]Loading weights:  33%|███▎      | 96/291 [00:18<00:30,  6.47it/s]Loading weights:  34%|███▍      | 100/291 [00:18<00:22,  8.50it/s]Loading weights:  35%|███▌      | 103/291 [00:18<00:20,  9.16it/s]Loading weights:  36%|███▌      | 105/291 [00:19<00:27,  6.66it/s]Loading weights:  37%|███▋      | 108/291 [00:19<00:20,  8.77it/s]Loading weights:  38%|███▊      | 110/291 [00:19<00:19,  9.52it/s]Loading weights:  38%|███▊      | 112/291 [00:19<00:19,  9.11it/s]Loading weights:  39%|███▉      | 114/291 [00:20<00:27,  6.43it/s]Loading weights:  40%|████      | 117/291 [00:20<00:19,  8.85it/s]Loading weights:  41%|████      | 119/291 [00:20<00:17,  9.93it/s]Loading weights:  42%|████▏     | 121/291 [00:21<00:18,  9.10it/s]Loading weights:  42%|████▏     | 123/291 [00:21<00:27,  6.00it/s]Loading weights:  43%|████▎     | 126/291 [00:21<00:19,  8.30it/s]Loading weights:  44%|████▍     | 128/291 [00:21<00:17,  9.26it/s]Loading weights:  45%|████▍     | 130/291 [00:22<00:18,  8.78it/s]Loading weights:  45%|████▌     | 132/291 [00:22<00:26,  6.04it/s]Loading weights:  46%|████▋     | 135/291 [00:22<00:18,  8.53it/s]Loading weights:  47%|████▋     | 137/291 [00:23<00:16,  9.58it/s]Loading weights:  48%|████▊     | 139/291 [00:23<00:16,  9.09it/s]Loading weights:  48%|████▊     | 141/291 [00:23<00:24,  6.19it/s]Loading weights:  50%|████▉     | 145/291 [00:24<00:17,  8.35it/s]Loading weights:  51%|█████     | 148/291 [00:24<00:15,  9.19it/s]Loading weights:  52%|█████▏    | 150/291 [00:25<00:21,  6.64it/s]Loading weights:  53%|█████▎    | 154/291 [00:25<00:15,  8.60it/s]Loading weights:  54%|█████▍    | 157/291 [00:25<00:15,  8.74it/s]Loading weights:  55%|█████▍    | 159/291 [00:26<00:22,  5.77it/s]Loading weights:  56%|█████▌    | 162/291 [00:26<00:16,  7.77it/s]Loading weights:  56%|█████▋    | 164/291 [00:26<00:14,  8.48it/s]Loading weights:  57%|█████▋    | 166/291 [00:27<00:17,  7.02it/s]Loading weights:  58%|█████▊    | 168/291 [00:27<00:25,  4.83it/s]Loading weights:  59%|█████▉    | 171/291 [00:27<00:17,  6.78it/s]Loading weights:  59%|█████▉    | 173/291 [00:28<00:15,  7.68it/s]Loading weights:  60%|██████    | 175/291 [00:28<00:16,  7.01it/s]Loading weights:  61%|██████    | 177/291 [00:29<00:22,  5.10it/s]Loading weights:  62%|██████▏   | 181/291 [00:29<00:14,  7.40it/s]Loading weights:  63%|██████▎   | 184/291 [00:29<00:13,  8.17it/s]Loading weights:  64%|██████▍   | 186/291 [00:30<00:16,  6.22it/s]Loading weights:  65%|██████▍   | 189/291 [00:30<00:13,  7.76it/s]Loading weights:  66%|██████▋   | 193/291 [00:30<00:10,  8.94it/s]Loading weights:  67%|██████▋   | 195/291 [00:31<00:15,  6.12it/s]Loading weights:  68%|██████▊   | 199/291 [00:31<00:10,  8.46it/s]Loading weights:  69%|██████▉   | 202/291 [00:32<00:10,  8.20it/s]Loading weights:  70%|███████   | 204/291 [00:32<00:15,  5.63it/s]Loading weights:  71%|███████   | 207/291 [00:32<00:11,  7.50it/s]Loading weights:  72%|███████▏  | 209/291 [00:33<00:09,  8.31it/s]Loading weights:  73%|███████▎  | 211/291 [00:33<00:09,  8.01it/s]Loading weights:  73%|███████▎  | 213/291 [00:33<00:13,  5.85it/s]Loading weights:  74%|███████▍  | 216/291 [00:34<00:09,  8.18it/s]Loading weights:  75%|███████▍  | 218/291 [00:34<00:08,  8.84it/s]Loading weights:  76%|███████▌  | 220/291 [00:34<00:08,  8.61it/s]Loading weights:  76%|███████▋  | 222/291 [00:35<00:11,  6.12it/s]Loading weights:  78%|███████▊  | 226/291 [00:35<00:07,  8.92it/s]Loading weights:  79%|███████▊  | 229/291 [00:35<00:07,  8.36it/s]Loading weights:  79%|███████▉  | 231/291 [00:36<00:09,  6.22it/s]Loading weights:  80%|████████  | 234/291 [00:36<00:06,  8.35it/s]Loading weights:  81%|████████  | 236/291 [00:36<00:05,  9.29it/s]Loading weights:  82%|████████▏ | 238/291 [00:36<00:05,  9.01it/s]Loading weights:  82%|████████▏ | 240/291 [00:37<00:08,  6.30it/s]Loading weights:  84%|████████▍ | 244/291 [00:37<00:05,  8.63it/s]Loading weights:  85%|████████▍ | 247/291 [00:37<00:04,  9.34it/s]Loading weights:  86%|████████▌ | 249/291 [00:38<00:06,  6.62it/s]Loading weights:  87%|████████▋ | 253/291 [00:38<00:04,  9.23it/s]Loading weights:  88%|████████▊ | 256/291 [00:38<00:03,  8.98it/s]Loading weights:  89%|████████▊ | 258/291 [00:39<00:05,  6.00it/s]Loading weights:  90%|████████▉ | 261/291 [00:39<00:03,  7.72it/s]Loading weights:  90%|█████████ | 263/291 [00:40<00:03,  8.01it/s]Loading weights:  91%|█████████ | 265/291 [00:40<00:03,  7.29it/s]Loading weights:  91%|█████████▏| 266/291 [00:40<00:04,  5.80it/s]Loading weights:  92%|█████████▏| 267/291 [00:41<00:05,  4.79it/s]Loading weights:  93%|█████████▎| 270/291 [00:41<00:02,  7.41it/s]Loading weights:  93%|█████████▎| 272/291 [00:41<00:02,  8.19it/s]Loading weights:  94%|█████████▍| 274/291 [00:41<00:02,  7.37it/s]Loading weights:  95%|█████████▍| 276/291 [00:42<00:03,  4.83it/s]Loading weights:  96%|█████████▌| 279/291 [00:42<00:01,  6.19it/s]Loading weights:  97%|█████████▋| 283/291 [00:43<00:01,  7.92it/s]Loading weights:  98%|█████████▊| 284/291 [00:43<00:01,  6.45it/s]Loading weights:  98%|█████████▊| 285/291 [00:43<00:01,  4.79it/s]Loading weights:  99%|█████████▉| 288/291 [00:44<00:00,  7.12it/s]Loading weights: 100%|█████████▉| 290/291 [00:44<00:00,  8.17it/s]Loading weights: 100%|██████████| 291/291 [00:44<00:00,  6.58it/s]
+Layers: 32
+
+[1/9] prompt='technical' seq_len=50
+     KL<=0.05: early=   135462  mid(L5-11)=   104462  saving= 22.9%
+     KL<=0.1: early=   104462  mid(L5-11)=   102787  saving=  1.6%
+     KL<=0.25: early=   104462  mid(L5-11)=   102787  saving=  1.6%
+[2/9] prompt='technical' seq_len=100
+     KL<=0.05: early=   270912  mid(L5-11)=   208912  saving= 22.9%
+     KL<=0.1: early=   270912  mid(L5-11)=   205562  saving= 24.1%
+     KL<=0.25: early=   208912  mid(L5-11)=   205562  saving=  1.6%
+[3/9] prompt='technical' seq_len=250
+     KL<=0.05: early=   677262  mid(L5-11)=   513887  saving= 24.1%
+     KL<=0.1: early=   677262  mid(L5-11)=   513887  saving= 24.1%
+     KL<=0.25: early=   522262  mid(L5-11)=   513887  saving=  1.6%
+[4/9] prompt='narrative' seq_len=50
+     KL<=0.05: early=   135462  mid(L5-11)=   104462  saving= 22.9%
+     KL<=0.1: early=   135462  mid(L5-11)=   102787  saving= 24.1%
+     KL<=0.25: early=   104462  mid(L5-11)=   102787  saving=  1.6%
+[5/9] prompt='narrative' seq_len=100
+     KL<=0.05: early=   270912  mid(L5-11)=   208912  saving= 22.9%
+     KL<=0.1: early=   270912  mid(L5-11)=   205562  saving= 24.1%
+     KL<=0.25: early=   208912  mid(L5-11)=   205562  saving=  1.6%
+[6/9] prompt='narrative' seq_len=250
+     KL<=0.05: early=   677262  mid(L5-11)=   522262  saving= 22.9%
+     KL<=0.1: early=   677262  mid(L5-11)=   513887  saving= 24.1%
+     KL<=0.25: early=   522262  mid(L5-11)=   513887  saving=  1.6%
+[7/9] prompt='conversational' seq_len=50
+     KL<=0.05: early=   135462  mid(L5-11)=   104462  saving= 22.9%
+     KL<=0.1: early=   135462  mid(L5-11)=   104462  saving= 22.9%
+     KL<=0.25: early=   104462  mid(L5-11)=   102787  saving=  1.6%
+[8/9] prompt='conversational' seq_len=100
+     KL<=0.05: early=   270912  mid(L5-11)=   208912  saving= 22.9%
+     KL<=0.1: early=   270912  mid(L5-11)=   208912  saving= 22.9%
+     KL<=0.25: early=   270912  mid(L5-11)=   205562  saving= 24.1%
+[9/9] prompt='conversational' seq_len=250
+     KL<=0.05: early=   677262  mid(L5-11)=   522262  saving= 22.9%
+     KL<=0.1: early=   677262  mid(L5-11)=   513887  saving= 24.1%
+     KL<=0.25: early=   677262  mid(L5-11)=   513887  saving= 24.1%
+
+======================================================================
+IS THE EFFECT BIGGER THAN THE VARIATION? (the Exp 09_01 test)
+======================================================================
+
+KL <= 0.05
+  saving across all 9 runs: min 22.9%  mean 23.0%  max 24.1%
+  spread between runs: 1.2 percentage points
+  ==> HOLDS. Every run shows a saving, and the variation
+      (1.2pp) is smaller than the effect (23.0%).
+
+KL <= 0.1
+  saving across all 9 runs: min 1.6%  mean 21.3%  max 24.1%
+  spread between runs: 22.5 percentage points
+  ==> DIRECTIONALLY HOLDS but noisy: the spread (22.5pp)
+      is as large as the effect (21.3%). Report the RANGE,
+      not a single number.
+
+KL <= 0.25
+  saving across all 9 runs: min 1.6%  mean 6.6%  max 24.1%
+  spread between runs: 22.5 percentage points
+  ==> DIRECTIONALLY HOLDS but noisy: the spread (22.5pp)
+      is as large as the effect (6.6%). Report the RANGE,
+      not a single number.
+
+======================================================================
+VERDICT: the early-vs-middle saving survives prompt and sequence
+length variation. Safe to build on.
+======================================================================
+
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/05_robustness.json
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/05_robustness.png

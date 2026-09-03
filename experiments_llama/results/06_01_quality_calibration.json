@@ -1,0 +1,322 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "ref_perplexity": 5.548603534698486,
+  "ppl_seq_len": 256,
+  "boundaries": [
+    5,
+    72,
+    1312
+  ],
+  "splits_tested": [
+    1,
+    7,
+    11
+  ],
+  "gen_prompt": "The main causes of the Industrial Revolution were",
+  "splits": {
+    "1": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2202386301396473e-07,
+        "perplexity": 5.548603534698486,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 3.0692286491394043,
+        "perplexity": 157.1865997314453,
+        "ppl_rise_pct": 2732.903788286018
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 11.943461418151855,
+        "perplexity": 1173365.5,
+        "ppl_rise_pct": 21146941.641420163
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.35623496770858765,
+        "perplexity": 8.69068717956543,
+        "ppl_rise_pct": 56.62836829515313
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 11.37734603881836,
+        "perplexity": 663844.8125,
+        "ppl_rise_pct": 11964078.163903967
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.00406234385445714,
+        "perplexity": 5.552396774291992,
+        "ppl_rise_pct": 0.06836386074053831
+      }
+    },
+    "7": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2202386301396473e-07,
+        "perplexity": 5.548603534698486,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.3812382221221924,
+        "perplexity": 8.159618377685547,
+        "ppl_rise_pct": 47.05715278914669
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 8.44831657409668,
+        "perplexity": 38223.01953125,
+        "ppl_rise_pct": 688776.386503745
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.02290361002087593,
+        "perplexity": 5.715622425079346,
+        "ppl_rise_pct": 3.0101067653581284
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.003138864878565073,
+        "perplexity": 5.479867935180664,
+        "ppl_rise_pct": -1.2387909694390769
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 8.3736572265625,
+        "perplexity": 32478.67578125,
+        "ppl_rise_pct": 585248.6481444003
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.0006610589334741235,
+        "perplexity": 5.560692310333252,
+        "ppl_rise_pct": 0.21787059679373064
+      }
+    },
+    "11": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2202386301396473e-07,
+        "perplexity": 5.548603534698486,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.09287287294864655,
+        "perplexity": 6.238361835479736,
+        "ppl_rise_pct": 12.431205373889302
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 8.386292457580566,
+        "perplexity": 35486.203125,
+        "ppl_rise_pct": 639451.9684022322
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.03349623829126358,
+        "perplexity": 5.876585483551025,
+        "ppl_rise_pct": 5.911071980571085
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.005349499173462391,
+        "perplexity": 5.620032787322998,
+        "ppl_rise_pct": 1.287337474696563
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 9.250808715820312,
+        "perplexity": 94830.609375,
+        "ppl_rise_pct": 1708989.6616053346
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.000566720322240144,
+        "perplexity": 5.54910135269165,
+        "ppl_rise_pct": 0.008971951051303833
+      }
+    }
+  },
+  "generations": {
+    "L1_UNCOMPRESSED": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L1_grouped(4, 4, 4)": "the development of the steam engine, the spinning jenny, and the power loom.. The main cause of the Industrial Revolution was the development of the steam engine, the spinning jenny, and",
+    "L1_uniform4": "\"))00??? I I I I Let",
+    "L1_grouped(8, 4, 4)": "the invention of the steam engine, the development of the factory system, and the availability of natural resources. The steam engine, invented by James Watt, allowed for the mechanization of industry, which increased",
+    "L1_grouped(8, 8, 4)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L1_uniform8": "/////\u306f\u306f\u306f==\u306f\u306f  The The   ? \n The The The The The The}}}{{{{{{{{{~~",
+    "L1_grouped(8, 8, 8)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L7_UNCOMPRESSED": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L7_grouped(4, 4, 4)": "the availability of natural resources, technological advancements, and the growth of a large and educated workforce. The Industrial Revolution was a period of significant economic growth and development in the 18th and 19th",
+    "L7_uniform4": "( ( ( ( going (\" was went went went went went went went went went with with with with went went went went went went went went went went went went with with with with with with with with",
+    "L7_grouped(8, 4, 4)": "the invention of the steam engine, the development of new machines and manufacturing techniques, and the growth of trade and commerce. The steam engine, invented by James Watt in 1769, was a key",
+    "L7_grouped(8, 8, 4)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L7_uniform8": "math>>>|||||||||>>>>>>>>+>>++============;\n;",
+    "L7_grouped(8, 8, 8)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L11_UNCOMPRESSED": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L11_grouped(4, 4, 4)": "the development of new technologies, the growth of a large and mobile workforce, and the availability of natural resources. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L11_uniform4": "....\n\n\n\n\n\n time time time",
+    "L11_grouped(8, 4, 4)": "the development of new technologies, the growth of cities, and the emergence of a new class of entrepreneurs. The Industrial Revolution was a period of significant economic, social, and political change in the late",
+    "L11_grouped(8, 8, 4)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late",
+    "L11_uniform8": "in the the and= ( (=**** than****\n******\n****\n**\n**\n than**\n**\n**\n be]]]] be would would would would would is is a. would",
+    "L11_grouped(8, 8, 8)": "the availability of natural resources, the development of new technologies, and the growth of a large and skilled workforce. The Industrial Revolution was a period of significant economic, technological, and social change in the late"
+  },
+  "budget_picks": {
+    "1": {
+      "1.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      },
+      "3.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      },
+      "5.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      },
+      "10.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      },
+      "15.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.006430241744965315,
+        "perplexity": 5.548635482788086,
+        "ppl_rise_pct": 0.0005757861306871235
+      }
+    },
+    "7": {
+      "1.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.003138864878565073,
+        "perplexity": 5.479867935180664,
+        "ppl_rise_pct": -1.2387909694390769
+      },
+      "3.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.003138864878565073,
+        "perplexity": 5.479867935180664,
+        "ppl_rise_pct": -1.2387909694390769
+      },
+      "5.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.02290361002087593,
+        "perplexity": 5.715622425079346,
+        "ppl_rise_pct": 3.0101067653581284
+      },
+      "10.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.02290361002087593,
+        "perplexity": 5.715622425079346,
+        "ppl_rise_pct": 3.0101067653581284
+      },
+      "15.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.02290361002087593,
+        "perplexity": 5.715622425079346,
+        "ppl_rise_pct": 3.0101067653581284
+      }
+    },
+    "11": {
+      "1.0": {
+        "scheme": "grouped(8, 8, 8)",
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.000566720322240144,
+        "perplexity": 5.54910135269165,
+        "ppl_rise_pct": 0.008971951051303833
+      },
+      "3.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.005349499173462391,
+        "perplexity": 5.620032787322998,
+        "ppl_rise_pct": 1.287337474696563
+      },
+      "5.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.005349499173462391,
+        "perplexity": 5.620032787322998,
+        "ppl_rise_pct": 1.287337474696563
+      },
+      "10.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.03349623829126358,
+        "perplexity": 5.876585483551025,
+        "ppl_rise_pct": 5.911071980571085
+      },
+      "15.0": {
+        "scheme": "grouped(4, 4, 4)",
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.09287287294864655,
+        "perplexity": 6.238361835479736,
+        "ppl_rise_pct": 12.431205373889302
+      }
+    }
+  }
+}

@@ -1,0 +1,393 @@
+Model: meta-llama/Llama-3.1-8B-Instruct
+Orders derived from: calibration text (recipe/instructional prose)
+Evaluated on: ['technical', 'narrative']
+Split range: L0-L11
+Noise floor: treat PPL differences under ~1pp as indistinguishable.
+
+==============================================================================
+EVALUATION TEXT: technical
+==============================================================================
+Reference (uncompressed) perplexity: 2.5648
+
+ORDER AGREEMENT: calibration-derived vs oracle (same-text) orders
+layer   same group   top5 kept   top72 kept
+---------------------------------------------
+    0       67.14%      100.0%        88.9%
+    1       99.61%      100.0%       100.0%
+    2       99.41%      100.0%       100.0%
+    3       96.29%      100.0%       100.0%
+    4       94.24%      100.0%       100.0%
+    5       89.31%      100.0%       100.0%
+    6       87.35%      100.0%       100.0%
+    7       85.01%      100.0%       100.0%
+    8       84.03%      100.0%       100.0%
+    9       83.74%      100.0%       100.0%
+   10       81.25%      100.0%       100.0%
+   11       80.66%      100.0%       100.0%
+
+QUALITY: frozen vs calibration-derived per-layer vs oracle per-layer
+
+--- split L0 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 | 261318261.66%      2.22%       2.62% | 261318259.43pp     -0.40pp
+grouped(8, 4, 4)      534796 | 473393.13%      0.24%      -0.15% |  473392.90pp      0.38pp
+grouped(8, 8, 4)      693516 |    33.50%     -0.18%      -0.24% |      33.68pp      0.06pp
+grouped(8, 8, 8)     1049868 |     0.47%      0.01%      -0.11% |       0.45pp      0.12pp
+
+--- split L1 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   325.01%    223.61%     256.18% |     101.39pp    -32.56pp
+grouped(8, 4, 4)      534796 |    10.00%      6.03%       5.70% |       3.97pp      0.33pp
+grouped(8, 8, 4)      693516 |    -0.50%     -0.08%      -0.44% |      -0.42pp      0.35pp
+grouped(8, 8, 8)     1049868 |     0.06%      0.04%       0.18% |       0.02pp     -0.14pp
+
+--- split L2 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   160.24%    160.24%     147.77% |       0.00pp     12.47pp
+grouped(8, 4, 4)      534796 |     1.58%      1.58%       0.92% |       0.00pp      0.66pp
+grouped(8, 8, 4)      693516 |    -0.16%     -0.16%      -0.30% |       0.00pp      0.14pp
+grouped(8, 8, 8)     1049868 |    -0.21%     -0.21%      -0.03% |       0.00pp     -0.19pp
+
+--- split L3 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    73.87%     90.43%      98.29% |     -16.57pp     -7.86pp
+grouped(8, 4, 4)      534796 |     2.13%      2.11%       2.24% |       0.02pp     -0.13pp
+grouped(8, 8, 4)      693516 |     0.52%      0.25%       0.75% |       0.27pp     -0.49pp
+grouped(8, 8, 8)     1049868 |     0.07%     -0.02%       0.06% |       0.09pp     -0.08pp
+
+--- split L4 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    41.35%     53.24%      57.09% |     -11.89pp     -3.85pp
+grouped(8, 4, 4)      534796 |     1.22%      1.74%       1.28% |      -0.52pp      0.46pp
+grouped(8, 8, 4)      693516 |     0.18%      0.59%       0.28% |      -0.41pp      0.31pp
+grouped(8, 8, 8)     1049868 |     0.19%      0.24%       0.48% |      -0.05pp     -0.25pp
+
+--- split L5 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    38.87%     26.19%      26.58% |      12.68pp     -0.38pp
+grouped(8, 4, 4)      534796 |     2.90%      0.71%       1.45% |       2.19pp     -0.74pp
+grouped(8, 8, 4)      693516 |     0.02%     -0.24%      -0.42% |       0.26pp      0.18pp
+grouped(8, 8, 8)     1049868 |    -0.22%     -0.12%       0.08% |      -0.11pp     -0.20pp
+
+--- split L6 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    30.09%     20.13%      20.12% |       9.96pp      0.01pp
+grouped(8, 4, 4)      534796 |     4.12%      1.81%       2.09% |       2.31pp     -0.28pp
+grouped(8, 8, 4)      693516 |     0.15%     -0.02%      -0.07% |       0.16pp      0.05pp
+grouped(8, 8, 8)     1049868 |    -0.22%     -0.14%      -0.12% |      -0.09pp     -0.01pp
+
+--- split L7 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    22.27%     20.78%      20.95% |       1.49pp     -0.17pp
+grouped(8, 4, 4)      534796 |     0.85%      0.96%       1.15% |      -0.10pp     -0.19pp
+grouped(8, 8, 4)      693516 |     0.14%      0.21%       0.13% |      -0.07pp      0.08pp
+grouped(8, 8, 8)     1049868 |     0.10%      0.33%      -0.13% |      -0.23pp      0.46pp
+
+--- split L8 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    13.11%     10.73%      10.24% |       2.38pp      0.49pp
+grouped(8, 4, 4)      534796 |     3.04%      0.14%       0.97% |       2.91pp     -0.83pp
+grouped(8, 8, 4)      693516 |     0.18%     -0.40%      -0.55% |       0.58pp      0.15pp
+grouped(8, 8, 8)     1049868 |    -0.04%     -0.29%       0.02% |       0.25pp     -0.31pp
+
+--- split L9 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    13.85%     13.02%      13.30% |       0.84pp     -0.29pp
+grouped(8, 4, 4)      534796 |     1.89%      2.09%       2.06% |      -0.20pp      0.03pp
+grouped(8, 8, 4)      693516 |     0.22%      0.45%       0.23% |      -0.23pp      0.22pp
+grouped(8, 8, 8)     1049868 |    -0.24%     -0.20%       0.17% |      -0.03pp     -0.37pp
+
+--- split L10 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    12.09%      7.12%       8.12% |       4.97pp     -1.01pp
+grouped(8, 4, 4)      534796 |     3.86%     -0.53%       0.48% |       4.40pp     -1.01pp
+grouped(8, 8, 4)      693516 |     0.72%     -0.33%       0.13% |       1.05pp     -0.46pp
+grouped(8, 8, 8)     1049868 |     0.26%     -0.19%      -0.20% |       0.44pp      0.01pp
+
+--- split L11 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |     7.02%      3.39%       3.06% |       3.63pp      0.33pp
+grouped(8, 4, 4)      534796 |     3.40%     -0.08%      -0.40% |       3.48pp      0.32pp
+grouped(8, 8, 4)      693516 |     1.56%      0.14%      -0.02% |       1.42pp      0.16pp
+grouped(8, 8, 8)     1049868 |    -0.10%     -0.03%       0.10% |      -0.07pp     -0.13pp
+
+SCHEME SELECTED AT EACH BUDGET
+
+--- budget <= 1.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)   grouped(8, 4, 4)         515072  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 4, 4)              0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    4   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    5   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)         158720  <--
+    6   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)              0
+    8   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    9   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   11   grouped(8, 8, 8)   grouped(8, 4, 4)   grouped(8, 4, 4)         515072  <--
+
+--- budget <= 3.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(4, 4, 4)   grouped(4, 4, 4)         523648  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    3   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    5   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    6   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    8   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   11   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+
+--- budget <= 5.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(4, 4, 4)   grouped(4, 4, 4)         523648  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    3   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    5   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    6   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   10   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   11   grouped(8, 4, 4)   grouped(4, 4, 4)   grouped(4, 4, 4)           8576  <--
+
+--- budget <= 10.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(4, 4, 4)   grouped(4, 4, 4)         523648  <--
+    1   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    2   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    3   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    5   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    6   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   10   grouped(8, 4, 4)   grouped(4, 4, 4)   grouped(4, 4, 4)           8576  <--
+   11   grouped(4, 4, 4)   grouped(4, 4, 4)   grouped(4, 4, 4)              0
+
+SUMMARY for technical:
+  calibration orders changed the scheme vs frozen in 15/48 cases
+  savings where changed: 1.6% to 49.9% (mean 28.9%)
+  calibration orders matched the ORACLE choice in 45/48 cases (94%)
+
+==============================================================================
+EVALUATION TEXT: narrative
+==============================================================================
+Reference (uncompressed) perplexity: 5.5486
+
+ORDER AGREEMENT: calibration-derived vs oracle (same-text) orders
+layer   same group   top5 kept   top72 kept
+---------------------------------------------
+    0       66.99%      100.0%        90.3%
+    1       99.76%      100.0%       100.0%
+    2       99.32%      100.0%       100.0%
+    3       96.78%      100.0%       100.0%
+    4       94.58%      100.0%       100.0%
+    5       89.06%      100.0%       100.0%
+    6       87.70%      100.0%       100.0%
+    7       84.62%      100.0%       100.0%
+    8       84.42%      100.0%       100.0%
+    9       83.30%      100.0%       100.0%
+   10       81.98%      100.0%       100.0%
+   11       79.93%      100.0%       100.0%
+
+QUALITY: frozen vs calibration-derived per-layer vs oracle per-layer
+
+--- split L0 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 | 468858700.91%     12.43%       9.67% | 468858688.48pp      2.76pp
+grouped(8, 4, 4)      534796 | 352025.94%      1.10%      -0.94% |  352024.84pp      2.04pp
+grouped(8, 8, 4)      693516 |   105.18%      0.07%      -0.47% |     105.11pp      0.53pp
+grouped(8, 8, 8)     1049868 |    -0.04%     -0.36%      -0.22% |       0.32pp     -0.14pp
+
+--- split L1 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |  2688.52%   2539.29%    1857.27% |     149.23pp    682.02pp
+grouped(8, 4, 4)      534796 |    46.78%     60.59%      48.57% |     -13.81pp     12.02pp
+grouped(8, 8, 4)      693516 |    -0.13%      0.86%       0.86% |      -0.99pp      0.00pp
+grouped(8, 8, 8)     1049868 |     0.01%     -0.10%      -0.36% |       0.11pp      0.26pp
+
+--- split L2 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   810.87%    810.87%     755.73% |       0.00pp     55.14pp
+grouped(8, 4, 4)      534796 |    13.92%     13.92%      13.28% |       0.00pp      0.64pp
+grouped(8, 8, 4)      693516 |     0.62%      0.62%      -0.54% |       0.00pp      1.16pp
+grouped(8, 8, 8)     1049868 |     0.06%      0.06%       0.19% |       0.00pp     -0.13pp
+
+--- split L3 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   184.65%    140.35%     117.15% |      44.30pp     23.20pp
+grouped(8, 4, 4)      534796 |     9.08%      8.33%       9.33% |       0.75pp     -1.00pp
+grouped(8, 8, 4)      693516 |     0.81%      0.32%       0.20% |       0.49pp      0.12pp
+grouped(8, 8, 8)     1049868 |     0.03%      0.10%       0.57% |      -0.07pp     -0.47pp
+
+--- split L4 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   108.48%     79.24%      82.64% |      29.24pp     -3.40pp
+grouped(8, 4, 4)      534796 |     4.69%      2.78%       3.70% |       1.91pp     -0.91pp
+grouped(8, 8, 4)      693516 |     0.27%      0.20%      -0.02% |       0.06pp      0.22pp
+grouped(8, 8, 8)     1049868 |     0.01%      0.17%       0.30% |      -0.17pp     -0.13pp
+
+--- split L5 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    62.00%     53.80%      46.66% |       8.20pp      7.13pp
+grouped(8, 4, 4)      534796 |     5.42%      1.36%       3.67% |       4.07pp     -2.31pp
+grouped(8, 8, 4)      693516 |     0.04%     -0.33%       0.42% |       0.37pp     -0.75pp
+grouped(8, 8, 8)     1049868 |     0.42%      0.12%       0.01% |       0.30pp      0.11pp
+
+--- split L6 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    48.15%     43.88%      40.77% |       4.28pp      3.10pp
+grouped(8, 4, 4)      534796 |     6.53%      4.12%       3.04% |       2.41pp      1.07pp
+grouped(8, 8, 4)      693516 |     1.23%      0.90%      -0.77% |       0.33pp      1.66pp
+grouped(8, 8, 8)     1049868 |    -0.01%     -0.28%      -0.02% |       0.28pp     -0.26pp
+
+--- split L7 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    49.20%     36.23%      42.16% |      12.97pp     -5.94pp
+grouped(8, 4, 4)      534796 |     2.83%      2.62%       3.51% |       0.21pp     -0.89pp
+grouped(8, 8, 4)      693516 |    -1.02%      0.55%       0.73% |      -1.57pp     -0.18pp
+grouped(8, 8, 8)     1049868 |     0.13%      0.30%       0.20% |      -0.17pp      0.10pp
+
+--- split L8 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    23.12%     22.81%      23.77% |       0.31pp     -0.96pp
+grouped(8, 4, 4)      534796 |     3.42%      0.55%       1.32% |       2.87pp     -0.77pp
+grouped(8, 8, 4)      693516 |     0.32%      0.68%       0.65% |      -0.36pp      0.03pp
+grouped(8, 8, 8)     1049868 |    -0.04%     -0.16%       0.06% |       0.13pp     -0.23pp
+
+--- split L9 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    17.06%     11.66%      12.40% |       5.40pp     -0.74pp
+grouped(8, 4, 4)      534796 |     4.68%      0.25%      -0.31% |       4.43pp      0.56pp
+grouped(8, 8, 4)      693516 |     0.11%      0.32%       0.25% |      -0.21pp      0.07pp
+grouped(8, 8, 8)     1049868 |     0.05%      0.09%      -0.01% |      -0.03pp      0.10pp
+
+--- split L10 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    25.46%     13.98%      13.09% |      11.48pp      0.89pp
+grouped(8, 4, 4)      534796 |    10.03%      2.81%       1.36% |       7.22pp      1.45pp
+grouped(8, 8, 4)      693516 |     2.50%      0.65%       0.45% |       1.86pp      0.20pp
+grouped(8, 8, 8)     1049868 |     0.35%     -0.00%       0.13% |       0.35pp     -0.14pp
+
+--- split L11 ---
+scheme                 bytes |  PPL froz  PPL calib  PPL oracle |  calib gain  vs oracle
+----------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    12.41%      6.72%       7.05% |       5.69pp     -0.33pp
+grouped(8, 4, 4)      534796 |     5.91%      1.82%       1.31% |       4.08pp      0.51pp
+grouped(8, 8, 4)      693516 |     1.39%      0.57%       0.18% |       0.82pp      0.39pp
+grouped(8, 8, 8)     1049868 |     0.18%     -0.04%      -0.11% |       0.21pp      0.07pp
+
+SCHEME SELECTED AT EACH BUDGET
+
+--- budget <= 1.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 8, 4)   grouped(8, 4, 4)         356352  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    4   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    5   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    6   grouped(8, 8, 8)   grouped(8, 8, 4)   grouped(8, 8, 4)         356352  <--
+    7   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    8   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)         158720  <--
+    9   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   10   grouped(8, 8, 8)   grouped(8, 8, 4)   grouped(8, 8, 4)         356352  <--
+   11   grouped(8, 8, 8)   grouped(8, 8, 4)   grouped(8, 8, 4)         356352  <--
+
+--- budget <= 3.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)   grouped(8, 4, 4)         515072  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    4   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)         158720  <--
+    5   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)         158720  <--
+    6   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 8, 4)              0
+    8   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    9   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   11   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+
+--- budget <= 5.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)   grouped(8, 4, 4)         515072  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    5   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    6   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   11   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+
+--- budget <= 10.0% ---
+layer             frozen              calib             oracle  saved vs froz
+------------------------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)   grouped(4, 4, 4)         515072  <--
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)   grouped(8, 8, 4)              0
+    3   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    5   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    6   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)              0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)   grouped(8, 4, 4)         158720  <--
+   11   grouped(8, 4, 4)   grouped(4, 4, 4)   grouped(4, 4, 4)           8576  <--
+
+SUMMARY for narrative:
+  calibration orders changed the scheme vs frozen in 21/48 cases
+  savings where changed: 1.6% to 49.1% (mean 27.7%)
+  calibration orders matched the ORACLE choice in 42/48 cases (88%)
+
+==============================================================================
+VERDICT
+==============================================================================
+If calibration-derived orders match the oracle in most cases and still
+beat the frozen order, the precomputed-table design survives deployment:
+orders can be built offline and shipped, with no per-request cost.
+If they collapse toward the frozen order, the design does not hold.

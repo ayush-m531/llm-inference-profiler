@@ -1,0 +1,202 @@
+nohup: ignoring input
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:54,  5.27it/s]Loading weights:   2%|▏         | 6/291 [00:00<00:19, 14.35it/s]Loading weights:   5%|▌         | 15/291 [00:00<00:08, 30.75it/s]Loading weights:   8%|▊         | 23/291 [00:00<00:06, 40.14it/s]Loading weights:  11%|█         | 31/291 [00:00<00:05, 43.95it/s]Loading weights:  12%|█▏        | 36/291 [00:01<00:06, 41.26it/s]Loading weights:  14%|█▍        | 41/291 [00:01<00:06, 39.52it/s]Loading weights:  16%|█▌        | 47/291 [00:01<00:05, 44.06it/s]Loading weights:  18%|█▊        | 52/291 [00:01<00:06, 38.01it/s]Loading weights:  20%|██        | 59/291 [00:01<00:05, 39.98it/s]Loading weights:  22%|██▏       | 65/291 [00:01<00:05, 44.02it/s]Loading weights:  24%|██▍       | 70/291 [00:01<00:05, 38.03it/s]Loading weights:  26%|██▌       | 76/291 [00:02<00:05, 42.74it/s]Loading weights:  28%|██▊       | 81/291 [00:02<00:05, 40.46it/s]Loading weights:  30%|██▉       | 86/291 [00:02<00:05, 38.92it/s]Loading weights:  31%|███▏      | 91/291 [00:02<00:04, 41.14it/s]Loading weights:  33%|███▎      | 96/291 [00:02<00:05, 35.99it/s]Loading weights:  36%|███▌      | 104/291 [00:02<00:04, 40.67it/s]Loading weights:  38%|███▊      | 110/291 [00:02<00:04, 44.56it/s]Loading weights:  40%|███▉      | 115/291 [00:03<00:04, 38.49it/s]Loading weights:  42%|████▏     | 121/291 [00:03<00:03, 43.21it/s]Loading weights:  43%|████▎     | 126/291 [00:03<00:04, 40.66it/s]Loading weights:  45%|████▌     | 131/291 [00:03<00:04, 39.02it/s]Loading weights:  47%|████▋     | 137/291 [00:03<00:03, 43.53it/s]Loading weights:  49%|████▉     | 142/291 [00:03<00:03, 37.42it/s]Loading weights:  51%|█████     | 148/291 [00:03<00:03, 42.58it/s]Loading weights:  53%|█████▎    | 153/291 [00:03<00:03, 40.26it/s]Loading weights:  54%|█████▍    | 158/291 [00:04<00:03, 38.84it/s]Loading weights:  56%|█████▋    | 164/291 [00:04<00:02, 43.72it/s]Loading weights:  58%|█████▊    | 169/291 [00:04<00:03, 37.74it/s]Loading weights:  60%|██████    | 176/291 [00:04<00:02, 39.65it/s]Loading weights:  63%|██████▎   | 182/291 [00:04<00:02, 43.88it/s]Loading weights:  64%|██████▍   | 187/291 [00:04<00:02, 38.27it/s]Loading weights:  66%|██████▋   | 193/291 [00:04<00:02, 42.90it/s]Loading weights:  68%|██████▊   | 198/291 [00:05<00:02, 40.50it/s]Loading weights:  70%|██████▉   | 203/291 [00:05<00:02, 38.83it/s]Loading weights:  71%|███████▏  | 208/291 [00:05<00:02, 41.27it/s]Loading weights:  73%|███████▎  | 213/291 [00:05<00:02, 36.19it/s]Loading weights:  76%|███████▌  | 220/291 [00:05<00:01, 43.89it/s]Loading weights:  77%|███████▋  | 225/291 [00:05<00:01, 41.08it/s]Loading weights:  79%|███████▉  | 230/291 [00:05<00:01, 39.14it/s]Loading weights:  81%|████████  | 236/291 [00:05<00:01, 43.65it/s]Loading weights:  83%|████████▎ | 241/291 [00:06<00:01, 37.45it/s]Loading weights:  85%|████████▍ | 247/291 [00:06<00:01, 42.48it/s]Loading weights:  87%|████████▋ | 252/291 [00:06<00:00, 40.26it/s]Loading weights:  88%|████████▊ | 257/291 [00:06<00:00, 38.72it/s]Loading weights:  90%|█████████ | 262/291 [00:06<00:00, 41.38it/s]Loading weights:  92%|█████████▏| 267/291 [00:06<00:00, 35.81it/s]Loading weights:  95%|█████████▍| 275/291 [00:06<00:00, 40.37it/s]Loading weights:  97%|█████████▋| 281/291 [00:07<00:00, 44.34it/s]Loading weights:  98%|█████████▊| 286/291 [00:07<00:00, 38.22it/s]Loading weights: 100%|██████████| 291/291 [00:07<00:00, 39.71it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+Model: meta-llama/Llama-3.1-8B-Instruct
+Layers: 32  |  perplexity text: 256 tokens
+Group boundaries: top=5, shoulder<=72, mid<=1312
+Split points: [1, 7, 11]
+Reference (uncompressed) perplexity: 2.5648
+
+==============================================================================
+SPLIT AT LAYER 1
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        2.5648      0.00%
+grouped(4, 4, 4)      526220   25.1%     1.4490       11.8431    361.76%
+uniform4              524292   25.0%    13.1787  1429028.5000 55717441.24%
+grouped(8, 4, 4)      534796   25.5%     0.1286        2.7915      8.84%
+grouped(8, 8, 4)      693516   33.1%     0.0026        2.5569     -0.31%
+uniform8             1048580   50.0%    12.6357   835416.6875 32572632.97%
+grouped(8, 8, 8)     1049868   50.1%     0.0013        2.5680      0.13%
+
+==============================================================================
+SPLIT AT LAYER 7
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        2.5648      0.00%
+grouped(4, 4, 4)      526220   25.1%     0.1227        3.1278     21.95%
+uniform4              524292   25.0%     9.9513    61345.4805 2391748.26%
+grouped(8, 4, 4)      534796   25.5%     0.0166        2.5716      0.27%
+grouped(8, 8, 4)      693516   33.1%     0.0024        2.5656      0.03%
+uniform8             1048580   50.0%     8.9990    23157.0488 902788.80%
+grouped(8, 8, 8)     1049868   50.1%     0.0005        2.5659      0.04%
+
+==============================================================================
+SPLIT AT LAYER 11
+==============================================================================
+scheme                 bytes   %fp16         KL    perplexity   PPL rise
+------------------------------------------------------------------------------
+UNCOMPRESSED         2097152  100.0%    -0.0000        2.5648      0.00%
+grouped(4, 4, 4)      526220   25.1%     0.0491        2.7462      7.07%
+uniform4              524292   25.0%     9.5595    44497.6094 1734853.07%
+grouped(8, 4, 4)      534796   25.5%     0.0157        2.6492      3.29%
+grouped(8, 8, 4)      693516   33.1%     0.0028        2.5984      1.31%
+uniform8             1048580   50.0%     9.1306    28088.0938 1095049.27%
+grouped(8, 8, 8)     1049868   50.1%     0.0004        2.5645     -0.01%
+
+==============================================================================
+GENERATED OUTPUT
+==============================================================================
+Prompt: "The three most important things to know about machine learning are"
+
+--- split at layer 1 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate
+
+  [grouped(4, 4, 4)]  KL=1.4490  PPL rise=+361.76%
+  :
+The three most important things to know about machine learning are:
+
+,The three most important things to know about machine learning are:
+
+  [uniform4]  KL=13.1787  PPL rise=+55717441.24%
+  00??? I I I I Let
+
+  [grouped(8, 4, 4)]  KL=0.1286  PPL rise=+8.84%
+  :
+1. **Data quality**: Machine learning models are only as good as the data they are trained on. Poor quality data can lead to poor model performance, and even worse, incorrect conclusions. Data
+
+  [grouped(8, 8, 4)]  KL=0.0026  PPL rise=-0.31%
+  :
+1. **Data is king**: Machine learning algorithms are only as good as the data they are trained on. If the data is biased, incomplete, or inaccurate, the model will be too.
+
+  [uniform8]  KL=12.6357  PPL rise=+32572632.97%
+  //ははは==はは  The The   ? 
+ The The The The The The}}}{{{{{{{{{~~~~~
+
+  [grouped(8, 8, 8)]  KL=0.0013  PPL rise=+0.13%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.
+2
+
+--- split at layer 7 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate
+
+  [grouped(4, 4, 4)]  KL=0.1227  PPL rise=+21.95%
+  :
+1. **Data**: Machine learning is all about data. It's the fuel that drives the learning process, and the quality of the data is what determines the quality of the model.
+2.
+
+  [uniform4]  KL=9.9513  PPL rise=+2391748.26%
+  ( going (" was went went went went went went went went went with with with with went went went went went went went went went went went went with with with with with with with with with with with
+
+  [grouped(8, 4, 4)]  KL=0.0166  PPL rise=+0.27%
+  :
+1. **Data is king**: Machine learning models are only as good as the data they are trained on. If the data is biased, incomplete, or noisy, the model will be too.
+
+  [grouped(8, 8, 4)]  KL=0.0024  PPL rise=+0.03%
+  :
+1. **Data is the fuel**: Machine learning models are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for building accurate and reliable models
+
+  [uniform8]  KL=8.9990  PPL rise=+902788.80%
+  >>>
+
+
+       >>;
+;
+;
+>>;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+  [grouped(8, 8, 8)]  KL=0.0005  PPL rise=+0.04%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.
+2
+
+--- split at layer 11 ---
+
+  [UNCOMPRESSED]  KL=-0.0000  PPL rise=+0.00%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate
+
+  [grouped(4, 4, 4)]  KL=0.0491  PPL rise=+7.07%
+  :
+1. **Data is king**: The quality and quantity of your data will determine the accuracy of your model. If your data is biased, incomplete, or noisy, your model will be too.
+
+  [uniform4]  KL=9.5595  PPL rise=+1734853.07%
+  ....
+
+
+
+
+
+ time time time
+
+  [grouped(8, 4, 4)]  KL=0.0157  PPL rise=+3.29%
+  :
+1. **Data is king**: The quality and quantity of your data will determine the quality of your model. If your data is noisy, biased, or incomplete, your model will suffer.
+2
+
+  [grouped(8, 8, 4)]  KL=0.0028  PPL rise=+1.31%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms rely on data to learn and make predictions. The quality and quantity of the data are crucial for the success of the model.
+
+  [uniform8]  KL=9.1306  PPL rise=+1095049.27%
+  the the the and the** the the} are are are are be be be is is be is is is is is is is is is is is is is is is is is... Ben
+
+  [grouped(8, 8, 8)]  KL=0.0004  PPL rise=-0.01%
+  :
+1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.
+2
+
+==============================================================================
+SCHEME SELECTION AT DIFFERENT PERPLEXITY BUDGETS
+==============================================================================
+Cheapest scheme whose perplexity rise stays within each budget.
+
+Split L1:
+  <=   1.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0026
+  <=   3.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0026
+  <=   5.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0026
+  <=  10.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.1286
+  <=  15.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.1286
+
+Split L7:
+  <=   1.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0166
+  <=   3.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0166
+  <=   5.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0166
+  <=  10.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0166
+  <=  15.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0166
+
+Split L11:
+  <=   1.0% : grouped(8, 8, 8)   1049868 B ( 50.1% of fp16)  KL=0.0004
+  <=   3.0% : grouped(8, 8, 4)    693516 B ( 33.1% of fp16)  KL=0.0028
+  <=   5.0% : grouped(8, 4, 4)    534796 B ( 25.5% of fp16)  KL=0.0157
+  <=  10.0% : grouped(4, 4, 4)    526220 B ( 25.1% of fp16)  KL=0.0491
+  <=  15.0% : grouped(4, 4, 4)    526220 B ( 25.1% of fp16)  KL=0.0491
+
+
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/06_quality_calibration.json
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/06_quality_calibration.txt

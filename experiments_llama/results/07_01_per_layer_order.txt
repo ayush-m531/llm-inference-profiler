@@ -1,0 +1,204 @@
+Model: meta-llama/Llama-3.1-8B-Instruct
+Feasible split range tested: L0-L11
+Single frozen order taken from layer 2
+Text domain: narrative/historical (07 used technical prose)
+Reference (uncompressed) perplexity: 5.5486
+
+==============================================================================
+ORDERING DRIFT FROM THE FROZEN ORDER
+==============================================================================
+layer   same group   top5 kept   top72 kept   loud missed
+------------------------------------------------------------
+    0       62.50%        0.0%        37.5%            45
+    1       97.46%      100.0%       100.0%             0
+    2      100.00%      100.0%       100.0%             0
+    3       94.92%      100.0%        98.6%             1
+    4       90.19%      100.0%        98.6%             1
+    5       85.99%      100.0%        98.6%             1
+    6       83.11%      100.0%        97.2%             2
+    7       79.00%      100.0%        94.4%             4
+    8       78.42%      100.0%        94.4%             4
+    9       77.64%      100.0%        94.4%             4
+   10       74.85%      100.0%        91.7%             6
+   11       73.10%      100.0%        91.7%             6
+
+==============================================================================
+QUALITY: FROZEN ORDER vs PER-LAYER ORDER
+==============================================================================
+NOTE: treat PPL gains under ~1pp as indistinguishable from noise.
+
+--- split L0 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |   15.1783    0.0540 | 468858700.91%     9.67% | 468858691.24pp
+grouped(8, 4, 4)      534796 |    8.0011    0.0028 | 352025.94%    -0.94% | 352026.88pp
+grouped(8, 8, 4)      693516 |    0.5756    0.0012 |    93.38%    -0.47% |    93.85pp
+grouped(8, 8, 8)     1049868 |    0.0085    0.0007 |    -0.05%    -0.22% |     0.17pp
+
+--- split L1 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    3.0692    2.6874 |  2732.90%  1857.27% |   875.63pp
+grouped(8, 4, 4)      534796 |    0.3562    0.2996 |    56.63%    48.57% |     8.06pp
+grouped(8, 8, 4)      693516 |    0.0064    0.0088 |     0.00%     0.86% |    -0.86pp
+grouped(8, 8, 8)     1049868 |    0.0041    0.0040 |     0.07%    -0.36% |     0.43pp
+
+--- split L2 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    1.8429    1.8429 |   755.73%   755.73% |     0.00pp
+grouped(8, 4, 4)      534796 |    0.0995    0.0995 |    13.28%    13.28% |     0.00pp
+grouped(8, 8, 4)      693516 |    0.0039    0.0039 |    -0.54%    -0.54% |     0.00pp
+grouped(8, 8, 8)     1049868 |    0.0028    0.0028 |     0.19%     0.19% |     0.00pp
+
+--- split L3 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.9047    0.6869 |   188.58%   117.15% |    71.42pp
+grouped(8, 4, 4)      534796 |    0.0574    0.0565 |     9.07%     9.33% |    -0.26pp
+grouped(8, 8, 4)      693516 |    0.0039    0.0020 |     0.84%     0.20% |     0.64pp
+grouped(8, 8, 8)     1049868 |    0.0015    0.0013 |     0.17%     0.57% |    -0.41pp
+
+--- split L4 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.6477    0.4968 |   107.96%    82.64% |    25.32pp
+grouped(8, 4, 4)      534796 |    0.0449    0.0326 |     5.02%     3.70% |     1.32pp
+grouped(8, 8, 4)      693516 |    0.0032    0.0016 |    -0.32%    -0.02% |    -0.30pp
+grouped(8, 8, 8)     1049868 |    0.0011    0.0010 |     0.02%     0.30% |    -0.28pp
+
+--- split L5 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.3925    0.3243 |    57.64%    46.66% |    10.98pp
+grouped(8, 4, 4)      534796 |    0.0657    0.0306 |     8.84%     3.67% |     5.17pp
+grouped(8, 8, 4)      693516 |    0.0038    0.0015 |     1.01%     0.42% |     0.58pp
+grouped(8, 8, 8)     1049868 |    0.0008    0.0008 |     0.27%     0.01% |     0.26pp
+
+--- split L6 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.3287    0.2752 |    47.18%    40.77% |     6.41pp
+grouped(8, 4, 4)      534796 |    0.0314    0.0180 |     6.61%     3.04% |     3.56pp
+grouped(8, 8, 4)      693516 |    0.0028    0.0012 |     1.24%    -0.77% |     2.01pp
+grouped(8, 8, 8)     1049868 |    0.0008    0.0008 |    -0.02%    -0.02% |    -0.00pp
+
+--- split L7 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.3812    0.3349 |    47.06%    42.16% |     4.89pp
+grouped(8, 4, 4)      534796 |    0.0229    0.0135 |     3.01%     3.51% |    -0.50pp
+grouped(8, 8, 4)      693516 |    0.0031    0.0013 |    -1.24%     0.73% |    -1.97pp
+grouped(8, 8, 8)     1049868 |    0.0007    0.0007 |     0.22%     0.20% |     0.02pp
+
+--- split L8 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.1838    0.2132 |    22.80%    23.77% |    -0.97pp
+grouped(8, 4, 4)      534796 |    0.0221    0.0131 |     3.73%     1.32% |     2.41pp
+grouped(8, 8, 4)      693516 |    0.0040    0.0013 |     0.17%     0.65% |    -0.48pp
+grouped(8, 8, 8)     1049868 |    0.0007    0.0007 |     0.03%     0.06% |    -0.03pp
+
+--- split L9 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.1203    0.1084 |    17.76%    12.40% |     5.36pp
+grouped(8, 4, 4)      534796 |    0.0239    0.0099 |     4.03%    -0.31% |     4.34pp
+grouped(8, 8, 4)      693516 |    0.0056    0.0012 |     0.09%     0.25% |    -0.16pp
+grouped(8, 8, 8)     1049868 |    0.0008    0.0007 |     0.23%    -0.01% |     0.24pp
+
+--- split L10 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.1570    0.0918 |    26.34%    13.09% |    13.24pp
+grouped(8, 4, 4)      534796 |    0.0396    0.0075 |    10.07%     1.36% |     8.72pp
+grouped(8, 8, 4)      693516 |    0.0070    0.0013 |     2.51%     0.45% |     2.07pp
+grouped(8, 8, 8)     1049868 |    0.0006    0.0006 |     0.11%     0.13% |    -0.02pp
+
+--- split L11 ---
+scheme                 bytes |   KL froz    KL own |  PPL froz   PPL own |  PPL gain
+------------------------------------------------------------------------------
+grouped(4, 4, 4)      526220 |    0.0929    0.0570 |    12.43%     7.05% |     5.38pp
+grouped(8, 4, 4)      534796 |    0.0335    0.0068 |     5.91%     1.31% |     4.60pp
+grouped(8, 8, 4)      693516 |    0.0053    0.0012 |     1.29%     0.18% |     1.11pp
+grouped(8, 8, 8)     1049868 |    0.0006    0.0006 |     0.01%    -0.11% |     0.12pp
+
+==============================================================================
+SCHEME SELECTED AT EACH BUDGET: FROZEN vs PER-LAYER
+==============================================================================
+
+--- perplexity budget <= 1.0% ---
+layer             frozen          per-layer   bytes saved
+------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)        515072  <-- CHANGED
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    4   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    5   grouped(8, 8, 8)   grouped(8, 8, 4)        356352  <-- CHANGED
+    6   grouped(8, 8, 8)   grouped(8, 8, 4)        356352  <-- CHANGED
+    7   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    8   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    9   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+   10   grouped(8, 8, 8)   grouped(8, 8, 4)        356352  <-- CHANGED
+   11   grouped(8, 8, 8)   grouped(8, 8, 4)        356352  <-- CHANGED
+
+--- perplexity budget <= 3.0% ---
+layer             frozen          per-layer   bytes saved
+------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)        515072  <-- CHANGED
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    4   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    5   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    6   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    7   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    8   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+    9   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+   11   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+
+--- perplexity budget <= 5.0% ---
+layer             frozen          per-layer   bytes saved
+------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(8, 4, 4)        515072  <-- CHANGED
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    3   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    4   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+    5   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+    6   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+   11   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+
+--- perplexity budget <= 10.0% ---
+layer             frozen          per-layer   bytes saved
+------------------------------------------------------------
+    0   grouped(8, 8, 8)   grouped(4, 4, 4)        523648  <-- CHANGED
+    1   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    2   grouped(8, 8, 4)   grouped(8, 8, 4)             0
+    3   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    4   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    5   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    6   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    7   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    8   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+    9   grouped(8, 4, 4)   grouped(8, 4, 4)             0
+   10   grouped(8, 8, 4)   grouped(8, 4, 4)        158720  <-- CHANGED
+   11   grouped(8, 4, 4)   grouped(4, 4, 4)          8576  <-- CHANGED
+
+==============================================================================
+OUTCOME
+==============================================================================
+Scheme selection changed in 20 of 48 (budget, layer) cases.
+Savings where it changed: 1.6% to 49.9% (mean 29.3%).
+No regressions.
+
+Compare against 07 (technical text) to see which findings reproduce:
+  - L0 collapse under the frozen order
+  - L10/L11 gains around 3-4pp
+  - L4/L7 regressions at the 1% budget (if these flip sign, they were noise)

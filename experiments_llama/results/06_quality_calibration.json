@@ -1,0 +1,322 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "ref_perplexity": 2.5647730827331543,
+  "ppl_seq_len": 256,
+  "boundaries": [
+    5,
+    72,
+    1312
+  ],
+  "splits_tested": [
+    1,
+    7,
+    11
+  ],
+  "gen_prompt": "The three most important things to know about machine learning are",
+  "splits": {
+    "1": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2231822665853542e-07,
+        "perplexity": 2.5647730827331543,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 1.4490312337875366,
+        "perplexity": 11.84312629699707,
+        "ppl_rise_pct": 361.7611739895689
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 13.178739547729492,
+        "perplexity": 1429028.5,
+        "ppl_rise_pct": 55717441.23671454
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.12858682870864868,
+        "perplexity": 2.79146146774292,
+        "ppl_rise_pct": 8.838535718263028
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.002573023084551096,
+        "perplexity": 2.556922674179077,
+        "ppl_rise_pct": -0.3060858914548241
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 12.63569450378418,
+        "perplexity": 835416.6875,
+        "ppl_rise_pct": 32572632.969021063
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.0013231119373813272,
+        "perplexity": 2.568009614944458,
+        "ppl_rise_pct": 0.12619175681049707
+      }
+    },
+    "7": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2231822665853542e-07,
+        "perplexity": 2.5647730827331543,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.12273751199245453,
+        "perplexity": 3.127782106399536,
+        "ppl_rise_pct": 21.951611526833805
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 9.951286315917969,
+        "perplexity": 61345.48046875,
+        "ppl_rise_pct": 2391748.2645403114
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.0023591823410242796,
+        "perplexity": 2.5656111240386963,
+        "ppl_rise_pct": 0.03267506631225762
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 8.999032974243164,
+        "perplexity": 23157.048828125,
+        "ppl_rise_pct": 902788.7968306208
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.0004978658980689943,
+        "perplexity": 2.565903663635254,
+        "ppl_rise_pct": 0.044081127867062773
+      }
+    },
+    "11": {
+      "UNCOMPRESSED": {
+        "bytes": 2097152.0,
+        "pct_fp16": 100.0,
+        "kl": -1.2231822665853542e-07,
+        "perplexity": 2.5647730827331543,
+        "ppl_rise_pct": 0.0
+      },
+      "grouped(4, 4, 4)": {
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.049052849411964417,
+        "perplexity": 2.7461962699890137,
+        "ppl_rise_pct": 7.073654526291483
+      },
+      "uniform4": {
+        "bytes": 524292.0,
+        "pct_fp16": 25.00019073486328,
+        "kl": 9.559515953063965,
+        "perplexity": 44497.609375,
+        "ppl_rise_pct": 1734853.0714655293
+      },
+      "grouped(8, 4, 4)": {
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.01574038527905941,
+        "perplexity": 2.649188995361328,
+        "ppl_rise_pct": 3.2913598944283944
+      },
+      "grouped(8, 8, 4)": {
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.0028395000845193863,
+        "perplexity": 2.5983834266662598,
+        "ppl_rise_pct": 1.3104607249421285
+      },
+      "uniform8": {
+        "bytes": 1048580.0,
+        "pct_fp16": 50.00019073486328,
+        "kl": 9.130620002746582,
+        "perplexity": 28088.09375,
+        "ppl_rise_pct": 1095049.272233779
+      },
+      "grouped(8, 8, 8)": {
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.00040903541957959533,
+        "perplexity": 2.564504861831665,
+        "ppl_rise_pct": -0.010457880398659978
+      }
+    }
+  },
+  "generations": {
+    "L1_UNCOMPRESSED": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate",
+    "L1_grouped(4, 4, 4)": ":\nThe three most important things to know about machine learning are:\n\n,The three most important things to know about machine learning are:",
+    "L1_uniform4": "00??? I I I I Let",
+    "L1_grouped(8, 4, 4)": ":\n1. **Data quality**: Machine learning models are only as good as the data they are trained on. Poor quality data can lead to poor model performance, and even worse, incorrect conclusions. Data",
+    "L1_grouped(8, 8, 4)": ":\n1. **Data is king**: Machine learning algorithms are only as good as the data they are trained on. If the data is biased, incomplete, or inaccurate, the model will be too.",
+    "L1_uniform8": "//\u306f\u306f\u306f==\u306f\u306f  The The   ? \n The The The The The The}}}{{{{{{{{{~~~~~",
+    "L1_grouped(8, 8, 8)": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.\n2",
+    "L7_UNCOMPRESSED": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate",
+    "L7_grouped(4, 4, 4)": ":\n1. **Data**: Machine learning is all about data. It's the fuel that drives the learning process, and the quality of the data is what determines the quality of the model.\n2.",
+    "L7_uniform4": "( going (\" was went went went went went went went went went with with with with went went went went went went went went went went went went with with with with with with with with with with with",
+    "L7_grouped(8, 4, 4)": ":\n1. **Data is king**: Machine learning models are only as good as the data they are trained on. If the data is biased, incomplete, or noisy, the model will be too.",
+    "L7_grouped(8, 8, 4)": ":\n1. **Data is the fuel**: Machine learning models are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for building accurate and reliable models",
+    "L7_uniform8": ">>>\n\n\n       >>;\n;\n;\n>>;\n;\n;\n;\n;\n;\n;\n;\n;\n;\n;\n;\n;\n;\n;",
+    "L7_grouped(8, 8, 8)": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.\n2",
+    "L11_UNCOMPRESSED": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms are only as good as the data they are trained on. High-quality, relevant, and diverse data is essential for training accurate",
+    "L11_grouped(4, 4, 4)": ":\n1. **Data is king**: The quality and quantity of your data will determine the accuracy of your model. If your data is biased, incomplete, or noisy, your model will be too.",
+    "L11_uniform4": "....\n\n\n\n\n\n time time time",
+    "L11_grouped(8, 4, 4)": ":\n1. **Data is king**: The quality and quantity of your data will determine the quality of your model. If your data is noisy, biased, or incomplete, your model will suffer.\n2",
+    "L11_grouped(8, 8, 4)": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms rely on data to learn and make predictions. The quality and quantity of the data are crucial for the success of the model.",
+    "L11_uniform8": "the the the and the** the the} are are are are be be be is is be is is is is is is is is is is is is is is is is is... Ben",
+    "L11_grouped(8, 8, 8)": ":\n1. **Data is the fuel for machine learning**: Machine learning algorithms require large amounts of data to learn from, and the quality of the data is crucial for the accuracy of the model.\n2"
+  },
+  "budget_picks": {
+    "1": {
+      "1.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.002573023084551096,
+        "perplexity": 2.556922674179077,
+        "ppl_rise_pct": -0.3060858914548241
+      },
+      "3.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.002573023084551096,
+        "perplexity": 2.556922674179077,
+        "ppl_rise_pct": -0.3060858914548241
+      },
+      "5.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.002573023084551096,
+        "perplexity": 2.556922674179077,
+        "ppl_rise_pct": -0.3060858914548241
+      },
+      "10.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.12858682870864868,
+        "perplexity": 2.79146146774292,
+        "ppl_rise_pct": 8.838535718263028
+      },
+      "15.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.12858682870864868,
+        "perplexity": 2.79146146774292,
+        "ppl_rise_pct": 8.838535718263028
+      }
+    },
+    "7": {
+      "1.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      },
+      "3.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      },
+      "5.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      },
+      "10.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      },
+      "15.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.016635946929454803,
+        "perplexity": 2.5716381072998047,
+        "ppl_rise_pct": 0.26766596284356925
+      }
+    },
+    "11": {
+      "1.0": {
+        "scheme": "grouped(8, 8, 8)",
+        "bytes": 1049868.0,
+        "pct_fp16": 50.061607360839844,
+        "kl": 0.00040903541957959533,
+        "perplexity": 2.564504861831665,
+        "ppl_rise_pct": -0.010457880398659978
+      },
+      "3.0": {
+        "scheme": "grouped(8, 8, 4)",
+        "bytes": 693516.0,
+        "pct_fp16": 33.069419860839844,
+        "kl": 0.0028395000845193863,
+        "perplexity": 2.5983834266662598,
+        "ppl_rise_pct": 1.3104607249421285
+      },
+      "5.0": {
+        "scheme": "grouped(8, 4, 4)",
+        "bytes": 534796.0,
+        "pct_fp16": 25.501060485839844,
+        "kl": 0.01574038527905941,
+        "perplexity": 2.649188995361328,
+        "ppl_rise_pct": 3.2913598944283944
+      },
+      "10.0": {
+        "scheme": "grouped(4, 4, 4)",
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.049052849411964417,
+        "perplexity": 2.7461962699890137,
+        "ppl_rise_pct": 7.073654526291483
+      },
+      "15.0": {
+        "scheme": "grouped(4, 4, 4)",
+        "bytes": 526220.0,
+        "pct_fp16": 25.092124938964844,
+        "kl": 0.049052849411964417,
+        "perplexity": 2.7461962699890137,
+        "ppl_rise_pct": 7.073654526291483
+      }
+    }
+  }
+}
