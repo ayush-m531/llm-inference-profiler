@@ -1,0 +1,192 @@
+nohup: ignoring input
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:13,  3.94it/s]Loading weights:   1%|          | 2/291 [00:00<01:25,  3.40it/s]Loading weights:   1%|▏         | 4/291 [00:00<00:41,  6.90it/s]Loading weights:   5%|▍         | 14/291 [00:00<00:10, 27.62it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:07, 35.52it/s]Loading weights:   9%|▉         | 27/291 [00:01<00:07, 35.58it/s]Loading weights:  11%|█         | 32/291 [00:01<00:07, 35.75it/s]Loading weights:  13%|█▎        | 38/291 [00:01<00:06, 41.14it/s]Loading weights:  15%|█▍        | 43/291 [00:01<00:06, 36.25it/s]Loading weights:  17%|█▋        | 49/291 [00:01<00:05, 41.62it/s]Loading weights:  19%|█▊        | 54/291 [00:01<00:05, 39.88it/s]Loading weights:  20%|██        | 59/291 [00:01<00:06, 38.58it/s]Loading weights:  22%|██▏       | 65/291 [00:02<00:05, 43.39it/s]Loading weights:  24%|██▍       | 70/291 [00:02<00:05, 37.38it/s]Loading weights:  26%|██▌       | 76/291 [00:02<00:05, 42.40it/s]Loading weights:  28%|██▊       | 81/291 [00:02<00:05, 40.18it/s]Loading weights:  30%|██▉       | 86/291 [00:02<00:05, 38.84it/s]Loading weights:  31%|███▏      | 91/291 [00:02<00:04, 41.33it/s]Loading weights:  33%|███▎      | 96/291 [00:02<00:05, 36.21it/s]Loading weights:  35%|███▌      | 103/291 [00:02<00:04, 43.98it/s]Loading weights:  37%|███▋      | 108/291 [00:03<00:04, 40.71it/s]Loading weights:  39%|███▉      | 113/291 [00:03<00:04, 39.10it/s]Loading weights:  41%|████      | 119/291 [00:03<00:03, 43.69it/s]Loading weights:  43%|████▎     | 124/291 [00:03<00:04, 37.70it/s]Loading weights:  45%|████▍     | 130/291 [00:03<00:03, 42.70it/s]Loading weights:  46%|████▋     | 135/291 [00:03<00:03, 40.03it/s]Loading weights:  48%|████▊     | 140/291 [00:03<00:03, 38.57it/s]Loading weights:  50%|█████     | 146/291 [00:04<00:03, 43.25it/s]Loading weights:  52%|█████▏    | 151/291 [00:04<00:03, 37.22it/s]Loading weights:  54%|█████▍    | 158/291 [00:04<00:03, 39.37it/s]Loading weights:  56%|█████▋    | 164/291 [00:04<00:02, 43.58it/s]Loading weights:  58%|█████▊    | 169/291 [00:04<00:03, 37.84it/s]Loading weights:  60%|██████    | 175/291 [00:04<00:02, 42.58it/s]Loading weights:  62%|██████▏   | 180/291 [00:04<00:02, 40.26it/s]Loading weights:  64%|██████▎   | 185/291 [00:05<00:02, 38.94it/s]Loading weights:  65%|██████▌   | 190/291 [00:05<00:02, 41.28it/s]Loading weights:  67%|██████▋   | 195/291 [00:05<00:02, 36.17it/s]Loading weights:  69%|██████▉   | 202/291 [00:05<00:02, 43.77it/s]Loading weights:  71%|███████   | 207/291 [00:05<00:02, 40.89it/s]Loading weights:  73%|███████▎  | 212/291 [00:05<00:02, 39.22it/s]Loading weights:  75%|███████▍  | 218/291 [00:05<00:01, 43.86it/s]Loading weights:  77%|███████▋  | 223/291 [00:05<00:01, 37.72it/s]Loading weights:  79%|███████▉  | 230/291 [00:06<00:01, 39.79it/s]Loading weights:  81%|████████  | 236/291 [00:06<00:01, 44.07it/s]Loading weights:  83%|████████▎ | 241/291 [00:06<00:01, 38.25it/s]Loading weights:  85%|████████▌ | 248/291 [00:06<00:01, 39.98it/s]Loading weights:  87%|████████▋ | 254/291 [00:06<00:00, 44.22it/s]Loading weights:  89%|████████▉ | 259/291 [00:06<00:00, 38.28it/s]Loading weights:  91%|█████████▏| 266/291 [00:07<00:00, 40.10it/s]Loading weights:  93%|█████████▎| 271/291 [00:07<00:00, 42.26it/s]Loading weights:  95%|█████████▍| 276/291 [00:07<00:00, 36.61it/s]Loading weights:  98%|█████████▊| 284/291 [00:07<00:00, 40.73it/s]Loading weights: 100%|█████████▉| 290/291 [00:07<00:00, 44.56it/s]Loading weights: 100%|██████████| 291/291 [00:07<00:00, 38.43it/s]
+Building per-layer orders from calibration text...
+Model: meta-llama/Llama-3.1-8B-Instruct
+seq_len 100 | orders from calibration text (not the eval text)
+Feasible split range (corrected memory ceiling): L5-L10
+Boundaries: top=5, shoulder<=72, mid<=1312
+
+Measuring 32 splits x 7 schemes x 2 orderings...
+  split  0 done
+  split  1 done
+  split  2 done
+  split  3 done
+  split  4 done
+  split  5 done
+  split  6 done
+  split  7 done
+  split  8 done
+  split  9 done
+  split 10 done
+  split 11 done
+  split 12 done
+  split 13 done
+  split 14 done
+  split 15 done
+  split 16 done
+  split 17 done
+  split 18 done
+  split 19 done
+  split 20 done
+  split 21 done
+  split 22 done
+  split 23 done
+  split 24 done
+  split 25 done
+  split 26 done
+  split 27 done
+  split 28 done
+  split 29 done
+  split 30 done
+  split 31 done
+==============================================================================
+BYTES PER SPLIT: FROZEN ORDER vs PER-LAYER ORDERS
+==============================================================================
+
+--- KL <= 0.05 ---
+layer   frozen bytes   per-layer bytes     frozen scheme   per-layer scheme
+------------------------------------------------------------------------------
+    0         409604            205562                 8          (4, 4, 4)
+    1         270912            270912         (8, 8, 4)          (8, 8, 4)
+    2         270912            270912         (8, 8, 4)          (8, 8, 4)
+    3         208912            208912         (8, 4, 4)          (8, 4, 4)
+    4         208912            208912         (8, 4, 4)          (8, 4, 4)
+    5         208912            208912         (8, 4, 4)          (8, 4, 4)
+    6         208912            208912         (8, 4, 4)          (8, 4, 4)
+    7         208912            208912         (8, 4, 4)          (8, 4, 4)
+    8         208912            208912         (8, 4, 4)          (8, 4, 4)
+    9         208912            208912         (8, 4, 4)          (8, 4, 4)
+   10         208912            208912         (8, 4, 4)          (8, 4, 4)
+   11         208912            208912         (8, 4, 4)          (8, 4, 4)
+   12         208912            205562         (8, 4, 4)          (4, 4, 4)
+   16         205562            205562         (4, 4, 4)          (4, 4, 4)
+   20         205562            205562         (4, 4, 4)          (4, 4, 4)
+   24         270912            205562         (8, 8, 4)          (4, 4, 4)
+   28         410112            205562         (8, 8, 8)          (4, 4, 4)
+   31         409604            270912                 8          (8, 8, 4)
+
+  FROZEN    : early(L0/L1)    270912 | best mid(L5-10)    208912 | saving  22.89%
+  PER-LAYER : early(L0/L1)    205562 | best mid(L5-10)    208912 | saving  -1.63%
+  => under the deployable design the split saving is ~0. Bytes do NOT
+     select the split point.
+
+--- KL <= 0.1 ---
+layer   frozen bytes   per-layer bytes     frozen scheme   per-layer scheme
+------------------------------------------------------------------------------
+    0         409604            205562                 8          (4, 4, 4)
+    1         270912            270912         (8, 8, 4)          (8, 8, 4)
+    2         208912            208912         (8, 4, 4)          (8, 4, 4)
+    3         208912            208912         (8, 4, 4)          (8, 4, 4)
+    4         208912            208912         (8, 4, 4)          (8, 4, 4)
+    5         208912            208912         (8, 4, 4)          (8, 4, 4)
+    6         208912            208912         (8, 4, 4)          (8, 4, 4)
+    7         208912            205562         (8, 4, 4)          (4, 4, 4)
+    8         205562            205562         (4, 4, 4)          (4, 4, 4)
+    9         205562            205562         (4, 4, 4)          (4, 4, 4)
+   10         205562            205562         (4, 4, 4)          (4, 4, 4)
+   11         205562            205562         (4, 4, 4)          (4, 4, 4)
+   12         205562            205562         (4, 4, 4)          (4, 4, 4)
+   16         205562            205562         (4, 4, 4)          (4, 4, 4)
+   20         205562            205562         (4, 4, 4)          (4, 4, 4)
+   24         205562            205562         (4, 4, 4)          (4, 4, 4)
+   28         270912            205562         (8, 8, 4)          (4, 4, 4)
+   31         409604            270912                 8          (8, 8, 4)
+
+  FROZEN    : early(L0/L1)    270912 | best mid(L5-10)    205562 | saving  24.12%
+  PER-LAYER : early(L0/L1)    205562 | best mid(L5-10)    205562 | saving   0.00%
+  => under the deployable design the split saving is ~0. Bytes do NOT
+     select the split point.
+
+--- KL <= 0.25 ---
+layer   frozen bytes   per-layer bytes     frozen scheme   per-layer scheme
+------------------------------------------------------------------------------
+    0         409604            205562                 8          (4, 4, 4)
+    1         208912            208912         (8, 4, 4)          (8, 4, 4)
+    2         208912            208912         (8, 4, 4)          (8, 4, 4)
+    3         208912            208912         (8, 4, 4)          (8, 4, 4)
+    4         208912            208912         (8, 4, 4)          (8, 4, 4)
+    5         205562            205562         (4, 4, 4)          (4, 4, 4)
+    6         205562            205562         (4, 4, 4)          (4, 4, 4)
+    7         205562            205562         (4, 4, 4)          (4, 4, 4)
+    8         205562            205562         (4, 4, 4)          (4, 4, 4)
+    9         205562            205562         (4, 4, 4)          (4, 4, 4)
+   10         205562            205562         (4, 4, 4)          (4, 4, 4)
+   11         205562            205562         (4, 4, 4)          (4, 4, 4)
+   12         205562            205562         (4, 4, 4)          (4, 4, 4)
+   16         205562            205562         (4, 4, 4)          (4, 4, 4)
+   20         205562            205562         (4, 4, 4)          (4, 4, 4)
+   24         205562            205562         (4, 4, 4)          (4, 4, 4)
+   28         205562            205562         (4, 4, 4)          (4, 4, 4)
+   31         409604            270912                 8          (8, 8, 4)
+
+  FROZEN    : early(L0/L1)    208912 | best mid(L5-10)    205562 | saving   1.60%
+  PER-LAYER : early(L0/L1)    205562 | best mid(L5-10)    205562 | saving   0.00%
+  => under the deployable design the split saving is ~0. Bytes do NOT
+     select the split point.
+
+--- KL <= 0.5 ---
+layer   frozen bytes   per-layer bytes     frozen scheme   per-layer scheme
+------------------------------------------------------------------------------
+    0         409604            205562                 8          (4, 4, 4)
+    1         208912            208912         (8, 4, 4)          (8, 4, 4)
+    2         208912            208912         (8, 4, 4)          (8, 4, 4)
+    3         208912            208912         (8, 4, 4)          (8, 4, 4)
+    4         205562            205562         (4, 4, 4)          (4, 4, 4)
+    5         205562            205562         (4, 4, 4)          (4, 4, 4)
+    6         205562            205562         (4, 4, 4)          (4, 4, 4)
+    7         205562            205562         (4, 4, 4)          (4, 4, 4)
+    8         205562            205562         (4, 4, 4)          (4, 4, 4)
+    9         205562            205562         (4, 4, 4)          (4, 4, 4)
+   10         205562            205562         (4, 4, 4)          (4, 4, 4)
+   11         205562            205562         (4, 4, 4)          (4, 4, 4)
+   12         205562            205562         (4, 4, 4)          (4, 4, 4)
+   16         205562            205562         (4, 4, 4)          (4, 4, 4)
+   20         205562            205562         (4, 4, 4)          (4, 4, 4)
+   24         205562            205562         (4, 4, 4)          (4, 4, 4)
+   28         205562            205562         (4, 4, 4)          (4, 4, 4)
+   31         409604            270912                 8          (8, 8, 4)
+
+  FROZEN    : early(L0/L1)    208912 | best mid(L5-10)    205562 | saving   1.60%
+  PER-LAYER : early(L0/L1)    205562 | best mid(L5-10)    205562 | saving   0.00%
+  => under the deployable design the split saving is ~0. Bytes do NOT
+     select the split point.
+
+--- KL <= 1.0 ---
+layer   frozen bytes   per-layer bytes     frozen scheme   per-layer scheme
+------------------------------------------------------------------------------
+    0         270912            205562         (8, 8, 4)          (4, 4, 4)
+    1         208912            208912         (8, 4, 4)          (8, 4, 4)
+    2         208912            208912         (8, 4, 4)          (8, 4, 4)
+    3         205562            205562         (4, 4, 4)          (4, 4, 4)
+    4         205562            205562         (4, 4, 4)          (4, 4, 4)
+    5         205562            205562         (4, 4, 4)          (4, 4, 4)
+    6         205562            205562         (4, 4, 4)          (4, 4, 4)
+    7         205562            205562         (4, 4, 4)          (4, 4, 4)
+    8         205562            205562         (4, 4, 4)          (4, 4, 4)
+    9         205562            205562         (4, 4, 4)          (4, 4, 4)
+   10         205562            205562         (4, 4, 4)          (4, 4, 4)
+   11         205562            205562         (4, 4, 4)          (4, 4, 4)
+   12         205562            205562         (4, 4, 4)          (4, 4, 4)
+   16         205562            205562         (4, 4, 4)          (4, 4, 4)
+   20         205562            205562         (4, 4, 4)          (4, 4, 4)
+   24         205562            205562         (4, 4, 4)          (4, 4, 4)
+   28         205562            205562         (4, 4, 4)          (4, 4, 4)
+   31         409604            205562                 8          (4, 4, 4)
+
+  FROZEN    : early(L0/L1)    208912 | best mid(L5-10)    205562 | saving   1.60%
+  PER-LAYER : early(L0/L1)    205562 | best mid(L5-10)    205562 | saving   0.00%
+  => under the deployable design the split saving is ~0. Bytes do NOT
+     select the split point.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  KL<=0.05 : frozen  22.89%   per-layer  -1.63%
+  KL<=0.1  : frozen  24.12%   per-layer   0.00%
+  KL<=0.25 : frozen   1.60%   per-layer   0.00%
+  KL<=0.5  : frozen   1.60%   per-layer   0.00%
+  KL<=1.0  : frozen   1.60%   per-layer   0.00%
+
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/09_bytes_per_split_perlayer.{json,txt,png}

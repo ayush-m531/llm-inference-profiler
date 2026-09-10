@@ -1,0 +1,174 @@
+Records at seq 256, per-layer ordering : 14,400
+Unique prompts                          : 300
+Model: random forest (100 trees, depth 8, min leaf 5), implemented in numpy
+Splitting by PROMPT, not by record
+
+========================================================================================
+FEATURE DEDUPLICATION
+========================================================================================
+Dropping one of any pair correlated above |r| = 0.95.
+
+  dropped skew                   (|r| = 0.999 with kurtosis)
+  dropped top5pct                (|r| = 0.998 with top1pct)
+  dropped top5_channels_share    (|r| = 0.954 with kurtosis)
+  dropped std                    (|r| = 0.988 with kurtosis)
+
+  KEPT (4): kurtosis, top1pct, mean_abs, max_over_mean
+
+========================================================================================
+A. WITHIN-CELL REGRESSION: predict KL, layer and scheme held fixed
+========================================================================================
+Held-out R2, averaged over 5 prompt-level splits. n=300 per cell, so about
+210 training prompts - thin for a forest. Watch the in-sample gap.
+
+layer           scheme      ridge     forest   forest in-samp
+----------------------------------------------------------------------------------------
+    0   grouped(4,4,4)     -0.040     -0.190            0.342
+    0   grouped(8,4,4)     -0.028     -0.090            0.424
+    0   grouped(8,8,4)     -0.027     -0.117            0.379
+    0   grouped(8,8,8)     -0.002     -0.130            0.385
+    1   grouped(4,4,4)     -0.017     -0.136            0.477
+    1   grouped(8,4,4)     -0.040     -0.001            0.536
+    1   grouped(8,8,4)     -0.026     -0.022            0.443
+    1   grouped(8,8,8)     -0.005     -0.088            0.454
+    2   grouped(4,4,4)     -0.019     -0.082            0.422
+    2   grouped(8,4,4)     -0.044      0.000            0.509
+    2   grouped(8,8,4)     -0.032     -0.086            0.451
+    2   grouped(8,8,8)     -0.010     -0.033            0.433
+    3   grouped(4,4,4)      0.017      0.052            0.517
+    3   grouped(8,4,4)     -0.017     -0.107            0.479
+    3   grouped(8,8,4)     -0.023     -0.057            0.505
+    3   grouped(8,8,8)     -0.019      0.006            0.495
+    4   grouped(4,4,4)      0.097      0.069            0.501
+    4   grouped(8,4,4)     -0.035     -0.040            0.498
+    4   grouped(8,8,4)     -0.056     -0.027            0.493
+    4   grouped(8,8,8)     -0.033     -0.130            0.441
+    5   grouped(4,4,4)      0.175      0.075            0.507
+    5   grouped(8,4,4)     -0.029     -0.023            0.502
+    5   grouped(8,8,4)     -0.064     -0.068            0.479
+    5   grouped(8,8,8)     -0.056     -0.187            0.461
+    6   grouped(4,4,4)      0.106      0.080            0.526
+    6   grouped(8,4,4)     -0.030      0.006            0.506
+    6   grouped(8,8,4)     -0.047      0.024            0.547
+    6   grouped(8,8,8)     -0.041     -0.019            0.461
+    7   grouped(4,4,4)     -0.017      0.019            0.499
+    7   grouped(8,4,4)     -0.028     -0.012            0.476
+    7   grouped(8,8,4)      0.006     -0.060            0.454
+    7   grouped(8,8,8)     -0.029     -0.102            0.455
+    8   grouped(4,4,4)     -0.038     -0.072            0.507
+    8   grouped(8,4,4)     -0.025     -0.006            0.456
+    8   grouped(8,8,4)     -0.011     -0.005            0.514
+    8   grouped(8,8,8)     -0.024     -0.027            0.411
+    9   grouped(4,4,4)     -0.032     -0.096            0.489
+    9   grouped(8,4,4)     -0.032     -0.017            0.528
+    9   grouped(8,8,4)      0.007      0.011            0.508
+    9   grouped(8,8,8)     -0.000     -0.035            0.469
+   10   grouped(4,4,4)     -0.049     -0.116            0.477
+   10   grouped(8,4,4)      0.020     -0.049            0.457
+   10   grouped(8,8,4)      0.047      0.019            0.511
+   10   grouped(8,8,8)     -0.014     -0.149            0.426
+   11   grouped(4,4,4)     -0.039     -0.031            0.475
+   11   grouped(8,4,4)     -0.009     -0.012            0.494
+   11   grouped(8,8,4)      0.027     -0.011            0.494
+   11   grouped(8,8,8)     -0.015     -0.113            0.388
+
+  ridge   best  0.175   mean -0.013
+  forest  best  0.080   mean -0.046
+  forest in-sample mean  0.472  (gap 0.518)
+
+========================================================================================
+B. GLOBAL MODEL, and what the ACTIVATION features add
+========================================================================================
+A global model with layer and scheme as features will show a high R2 -
+but those two explain most of the variance on their own, and the lookup
+table already knows both. The number that matters is the GAIN from adding
+the activation features. A high global R2 without a gain is the
+pooled-correlation trap in a new form.
+
+     model    config only   + activation       gain
+----------------------------------------------------------------------------------------
+     ridge          0.254          0.395     +0.141
+    forest          0.962          0.960     -0.002
+
+READING THIS: ridge cannot represent layer and scheme as CATEGORICAL
+variables - it treats layer 0-11 as a linear number - so its config-only
+fit is poor and the activation features partly act as proxies for layer
+identity. That inflates ridge's apparent gain. The forest splits on layer
+and scheme properly, so ITS gain is the honest measure of what the
+activation contributes beyond what the lookup table already encodes.
+
+========================================================================================
+D. CLASSIFICATION: predict whether the budget is breached
+========================================================================================
+The review's strongest suggestion - the controller needs a risk decision,
+not an exact KL. AUC 0.5 is a coin flip; below ~0.7 is not usable.
+Cells where almost all inputs fall on one side are skipped: AUC is
+meaningless there and the controller's answer is obvious anyway.
+
+--- budget KL <= 0.05 ---
+layer           scheme   % breach   forest AUC
+----------------------------------------------------------------------------------------
+    0   grouped(4,4,4)      94.3%        0.478
+    4   grouped(8,4,4)      38.0%        0.498
+    5   grouped(8,4,4)       7.7%        0.601
+
+--- budget KL <= 0.1 ---
+layer           scheme   % breach   forest AUC
+----------------------------------------------------------------------------------------
+    0   grouped(4,4,4)      41.7%        0.475
+    2   grouped(8,4,4)      74.0%        0.568
+    3   grouped(8,4,4)      19.0%        0.519
+   10   grouped(4,4,4)      73.0%        0.485
+   11   grouped(4,4,4)      22.3%        0.649
+
+--- budget KL <= 0.25 ---
+layer           scheme   % breach   forest AUC
+----------------------------------------------------------------------------------------
+    0   grouped(4,4,4)       7.7%        0.477
+    6   grouped(4,4,4)      94.3%        0.509
+    7   grouped(4,4,4)      56.7%        0.602
+
+  forest AUC across 11 usable cells: best 0.649   mean 0.533
+  Only 11 of 144 (budget, layer, scheme) combinations had a usable class balance.
+  Elsewhere the budget is either almost always met or almost always
+  breached - the decision is determined by the CONFIGURATION, not by
+  the input.
+
+========================================================================================
+VERDICT
+========================================================================================
+  within-cell, ridge  : best 0.175  mean -0.013
+  within-cell, forest : best 0.080  mean -0.046
+  forest in-sample 0.472 vs held-out -0.046  (gap 0.518)
+
+  global config-only R2 (forest)      : 0.962
+  global + activation R2 (forest)     : 0.960
+  activation gain (forest)            : -0.002
+  (ridge gain was +0.141, but ridge cannot model
+   layer/scheme as categories - not the honest measure)
+
+  best classification AUC             : 0.649
+
+  For reference, 11c reported mean held-out R2 = 0.000 with least squares.
+
+  A non-linear learned model does NOT recover usable signal. It made
+  matters WORSE: within cells the forest mean is below the ridge mean,
+  and both are below zero - i.e. worse than predicting the mean. The
+  in-sample/held-out gap shows why: the forest fits the training
+  prompts and does not transfer.
+
+  The negative now covers:
+    1. handcrafted statistics, individually, linear (Pearson)
+    2. the same, monotone non-linear (Spearman)
+    3. the same, combined, linear multivariate, held out
+    4. token-position structure and effective rank
+    5. a random forest, regression AND classification, with
+       prompt-level splits
+
+  CLAIM WORDING (the review's framing is correct - adopt it):
+    The tested low-cost handcrafted activation statistics did not
+    provide sufficient out-of-sample predictive accuracy for reliable
+    per-input hardness estimation, under either linear or non-linear
+    learned models, in regression or classification form, with
+    prompt-level validation. Richer activation representations and
+    deployable text-level difficulty features remain untested.

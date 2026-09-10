@@ -1,0 +1,40 @@
+nohup: ignoring input
+Loading model...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:15,  3.86it/s]Loading weights:   1%|          | 2/291 [00:00<01:25,  3.38it/s]Loading weights:   2%|▏         | 5/291 [00:00<00:31,  9.04it/s]Loading weights:   5%|▍         | 14/291 [00:00<00:09, 28.11it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:07, 38.12it/s]Loading weights:  10%|▉         | 28/291 [00:01<00:06, 37.74it/s]Loading weights:  11%|█▏        | 33/291 [00:01<00:07, 34.18it/s]Loading weights:  14%|█▎        | 40/291 [00:01<00:06, 41.80it/s]Loading weights:  15%|█▌        | 45/291 [00:01<00:06, 39.63it/s]Loading weights:  17%|█▋        | 50/291 [00:01<00:06, 38.42it/s]Loading weights:  19%|█▉        | 56/291 [00:01<00:05, 43.14it/s]Loading weights:  21%|██        | 61/291 [00:01<00:06, 37.40it/s]Loading weights:  23%|██▎       | 68/291 [00:02<00:05, 39.63it/s]Loading weights:  25%|██▌       | 73/291 [00:02<00:05, 41.75it/s]Loading weights:  27%|██▋       | 78/291 [00:02<00:05, 36.68it/s]Loading weights:  29%|██▉       | 85/291 [00:02<00:04, 44.09it/s]Loading weights:  31%|███       | 90/291 [00:02<00:04, 41.18it/s]Loading weights:  33%|███▎      | 95/291 [00:02<00:04, 39.38it/s]Loading weights:  34%|███▍      | 100/291 [00:02<00:04, 41.82it/s]Loading weights:  36%|███▌      | 105/291 [00:03<00:05, 35.96it/s]Loading weights:  39%|███▉      | 113/291 [00:03<00:04, 40.39it/s]Loading weights:  41%|████      | 118/291 [00:03<00:04, 42.51it/s]Loading weights:  42%|████▏     | 123/291 [00:03<00:04, 36.75it/s]Loading weights:  45%|████▍     | 130/291 [00:03<00:03, 43.83it/s]Loading weights:  46%|████▋     | 135/291 [00:03<00:03, 41.05it/s]Loading weights:  48%|████▊     | 140/291 [00:03<00:03, 39.18it/s]Loading weights:  50%|████▉     | 145/291 [00:03<00:03, 41.65it/s]Loading weights:  52%|█████▏    | 150/291 [00:04<00:03, 36.07it/s]Loading weights:  54%|█████▍    | 157/291 [00:04<00:03, 43.79it/s]Loading weights:  56%|█████▌    | 162/291 [00:04<00:03, 40.92it/s]Loading weights:  57%|█████▋    | 167/291 [00:04<00:03, 39.14it/s]Loading weights:  59%|█████▉    | 172/291 [00:04<00:02, 41.65it/s]Loading weights:  61%|██████    | 177/291 [00:04<00:03, 35.81it/s]Loading weights:  64%|██████▎   | 185/291 [00:05<00:02, 40.28it/s]Loading weights:  66%|██████▌   | 191/291 [00:05<00:02, 44.23it/s]Loading weights:  67%|██████▋   | 196/291 [00:05<00:02, 38.24it/s]Loading weights:  69%|██████▉   | 202/291 [00:05<00:02, 42.89it/s]Loading weights:  71%|███████   | 207/291 [00:05<00:02, 40.63it/s]Loading weights:  73%|███████▎  | 212/291 [00:05<00:02, 38.87it/s]Loading weights:  75%|███████▍  | 217/291 [00:05<00:01, 41.46it/s]Loading weights:  76%|███████▋  | 222/291 [00:05<00:01, 35.77it/s]Loading weights:  79%|███████▊  | 229/291 [00:06<00:01, 43.40it/s]Loading weights:  80%|████████  | 234/291 [00:06<00:01, 40.83it/s]Loading weights:  82%|████████▏ | 239/291 [00:06<00:01, 38.97it/s]Loading weights:  84%|████████▍ | 245/291 [00:06<00:01, 43.54it/s]Loading weights:  86%|████████▌ | 250/291 [00:06<00:01, 37.52it/s]Loading weights:  88%|████████▊ | 256/291 [00:06<00:00, 42.39it/s]Loading weights:  90%|████████▉ | 261/291 [00:06<00:00, 38.21it/s]Loading weights:  91%|█████████▏| 266/291 [00:07<00:00, 37.93it/s]Loading weights:  93%|█████████▎| 272/291 [00:07<00:00, 42.73it/s]Loading weights:  95%|█████████▌| 277/291 [00:07<00:00, 37.29it/s]Loading weights:  98%|█████████▊| 284/291 [00:07<00:00, 39.38it/s]Loading weights:  99%|█████████▉| 289/291 [00:07<00:00, 41.66it/s]Loading weights: 100%|██████████| 291/291 [00:07<00:00, 38.36it/s]
+Trying Salesforce/wikitext / wikitext-2-raw-v1 / test ...
+  got 300 passages
+Using 300 passages from Salesforce/wikitext/wikitext-2-raw-v1/test
+
+Target: 86,400 measurements (300 texts x 3 lengths x 12 layers x 4 schemes x 2 orderings)
+
+  25/300 texts | 7,200 records | 5.7 min elapsed | ~62 min left
+  50/300 texts | 14,400 records | 11.5 min elapsed | ~58 min left
+  75/300 texts | 21,600 records | 17.4 min elapsed | ~52 min left
+  100/300 texts | 28,800 records | 23.3 min elapsed | ~47 min left
+  125/300 texts | 36,000 records | 29.3 min elapsed | ~41 min left
+  150/300 texts | 43,200 records | 35.2 min elapsed | ~35 min left
+  175/300 texts | 50,400 records | 41.1 min elapsed | ~29 min left
+  200/300 texts | 57,600 records | 47.1 min elapsed | ~24 min left
+  225/300 texts | 64,800 records | 53.0 min elapsed | ~18 min left
+  250/300 texts | 72,000 records | 59.0 min elapsed | ~12 min left
+  275/300 texts | 79,200 records | 64.9 min elapsed | ~6 min left
+  300/300 texts | 86,400 records | 70.9 min elapsed | ~0 min left
+
+Done. 86,400 records in 70.9 minutes.
+Source: Salesforce/wikitext/wikitext-2-raw-v1/test
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/11a_collect.json
+
+Sanity check - KL by layer (per_layer order, seq 256, grouped(8,4,4)):
+  L 0: mean 0.01029  min 0.00325  max 0.06525  p95 0.01895  n=300
+  L 1: mean 0.44334  min 0.19912  max 1.56202  p95 0.71235  n=300
+  L 2: mean 0.12997  min 0.05421  max 0.37359  p95 0.21808  n=300
+  L 3: mean 0.08283  min 0.03473  max 0.27330  p95 0.14112  n=300
+  L 4: mean 0.04995  min 0.02558  max 0.09728  p95 0.07923  n=300
+  L 5: mean 0.03720  min 0.02094  max 0.08313  p95 0.05417  n=300
+  L 6: mean 0.02706  min 0.01465  max 0.05365  p95 0.03975  n=300
+  L 7: mean 0.02123  min 0.01287  max 0.04508  p95 0.03077  n=300
+  L 8: mean 0.01739  min 0.00970  max 0.03038  p95 0.02386  n=300
+  L 9: mean 0.01497  min 0.00924  max 0.03161  p95 0.02022  n=300
+  L10: mean 0.01032  min 0.00669  max 0.02005  p95 0.01408  n=300
+  L11: mean 0.00984  min 0.00600  max 0.01835  p95 0.01369  n=300

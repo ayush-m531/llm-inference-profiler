@@ -1,0 +1,68 @@
+Model: meta-llama/Llama-3.1-8B-Instruct
+WikiText baseline: 300 texts, mean reference perplexity 11.536
+seq_len 256, layers [3, 6, 9, 11], per-layer channel ordering
+Passages shorter than 261 tokens are REJECTED, not padded.
+
+REJECTED (too short - would have needed padding):
+  dense_technical sample 0: 249 tokens < 261
+  dense_technical sample 1: 211 tokens < 261
+  dialogue sample 0: 257 tokens < 261
+  dialogue sample 1: 229 tokens < 261
+
+============================================================================================
+1. HOW HARD IS EACH DOMAIN?
+============================================================================================
+Reference perplexity of the UNCOMPRESSED model. Higher = harder to
+predict. If these are not above the WikiText figure, the test has failed
+to produce hard input and nothing below is meaningful.
+
+            domain   mean ref_ppl   vs WikiText
+--------------------------------------------------------------------------------------------
+  wikitext (calib)         11.536         1.00x
+              code          2.205         0.19x
+          gujarati          1.822         0.16x
+             hindi          2.467         0.21x
+       shakespeare          1.400         0.12x
+
+============================================================================================
+2. WOULD THE CONTROLLER'S CHOICE BREACH THE BUDGET?
+============================================================================================
+The controller picks the cheapest scheme whose WikiText p95 meets the
+budget. This asks whether that choice ACTUALLY meets the budget on each
+domain. Not whether the KL differs - whether the DECISION is wrong.
+
+--- budget KL <= 0.05 ---
+layer  controller picks   wiki p95         code   gujarati      hindi  shakespea
+--------------------------------------------------------------------------------------------
+    3    grouped(8,8,4)    0.00735     0.00150    0.00396    0.00251    0.00326 
+    6    grouped(8,4,4)    0.03975     0.01673    0.01625    0.02866    0.03088 
+    9    grouped(8,4,4)    0.02022     0.00954    0.01027    0.01124    0.02009 
+   11    grouped(8,4,4)    0.01369     0.00549    0.00691    0.00673    0.01191 
+
+--- budget KL <= 0.1 ---
+layer  controller picks   wiki p95         code   gujarati      hindi  shakespea
+--------------------------------------------------------------------------------------------
+    3    grouped(8,8,4)    0.00735     0.00150    0.00396    0.00251    0.00326 
+    6    grouped(8,4,4)    0.03975     0.01673    0.01625    0.02866    0.03088 
+    9    grouped(8,4,4)    0.02022     0.00954    0.01027    0.01124    0.02009 
+   11    grouped(8,4,4)    0.01369     0.00549    0.00691    0.00673    0.01191 
+
+--- budget KL <= 0.25 ---
+layer  controller picks   wiki p95         code   gujarati      hindi  shakespea
+--------------------------------------------------------------------------------------------
+    3    grouped(8,4,4)    0.14112     0.03155    0.09422    0.12300    0.06193 
+    6    grouped(8,4,4)    0.03975     0.01673    0.01625    0.02866    0.03088 
+    9    grouped(4,4,4)    0.19739     0.09522    0.10190    0.14996    0.48684X
+   11    grouped(4,4,4)    0.11696     0.06042    0.08160    0.10291    0.27995X
+
+  X = the controller's choice BREACHES the budget on that domain
+
+============================================================================================
+VERDICT
+============================================================================================
+  Domains harder than WikiText: 0 of 4
+  Controller decisions that breached the budget: 2 of 48
+
+  TEST INCONCLUSIVE. No domain came out harder than the calibration
+  corpus, so a clean pass says little. Do not claim the table
+  generalises to hard input on this evidence.

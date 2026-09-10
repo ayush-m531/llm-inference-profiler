@@ -1,0 +1,1293 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "seq_len": 256,
+  "layers": [
+    3,
+    6,
+    9,
+    11
+  ],
+  "wikitext_baseline": {
+    "3_grouped(4,4,4)": {
+      "mean": 0.8220003445943197,
+      "p95": 1.1904926300048828,
+      "max": 1.6800191402435303,
+      "n": 300
+    },
+    "3_grouped(8,4,4)": {
+      "mean": 0.08283095472802718,
+      "p95": 0.14112228155136108,
+      "max": 0.27329927682876587,
+      "n": 300
+    },
+    "3_grouped(8,8,4)": {
+      "mean": 0.004504886277330419,
+      "p95": 0.007354447618126869,
+      "max": 0.017010975629091263,
+      "n": 300
+    },
+    "3_grouped(8,8,8)": {
+      "mean": 0.0024904125389487793,
+      "p95": 0.0038806891534477472,
+      "max": 0.00801815651357174,
+      "n": 300
+    },
+    "6_grouped(4,4,4)": {
+      "mean": 0.3492866413295269,
+      "p95": 0.4757598638534546,
+      "max": 0.7068071961402893,
+      "n": 300
+    },
+    "6_grouped(8,4,4)": {
+      "mean": 0.027057928604384263,
+      "p95": 0.03975480794906616,
+      "max": 0.053650591522455215,
+      "n": 300
+    },
+    "6_grouped(8,8,4)": {
+      "mean": 0.0022096823051106183,
+      "p95": 0.0029527752194553614,
+      "max": 0.003900483250617981,
+      "n": 300
+    },
+    "6_grouped(8,8,8)": {
+      "mean": 0.0011751458947158728,
+      "p95": 0.0014974713558331132,
+      "max": 0.0023340515326708555,
+      "n": 300
+    },
+    "9_grouped(4,4,4)": {
+      "mean": 0.14844199150800705,
+      "p95": 0.19738876819610596,
+      "max": 0.28734272718429565,
+      "n": 300
+    },
+    "9_grouped(8,4,4)": {
+      "mean": 0.014968660951902468,
+      "p95": 0.020223449915647507,
+      "max": 0.031612247228622437,
+      "n": 300
+    },
+    "9_grouped(8,8,4)": {
+      "mean": 0.00181743939834026,
+      "p95": 0.002320048399269581,
+      "max": 0.0035663186572492123,
+      "n": 300
+    },
+    "9_grouped(8,8,8)": {
+      "mean": 0.0008961787169876819,
+      "p95": 0.0010536329355090857,
+      "max": 0.0013537476770579815,
+      "n": 300
+    },
+    "11_grouped(4,4,4)": {
+      "mean": 0.08907566578437885,
+      "p95": 0.11696407198905945,
+      "max": 0.198672354221344,
+      "n": 300
+    },
+    "11_grouped(8,4,4)": {
+      "mean": 0.009840667170162002,
+      "p95": 0.013689722865819931,
+      "max": 0.01834704726934433,
+      "n": 300
+    },
+    "11_grouped(8,8,4)": {
+      "mean": 0.0017034116530946146,
+      "p95": 0.0022016617003828287,
+      "max": 0.0028924348298460245,
+      "n": 300
+    },
+    "11_grouped(8,8,8)": {
+      "mean": 0.0008077194394233326,
+      "p95": 0.0009646768448874354,
+      "max": 0.0012236336478963494,
+      "n": 300
+    }
+  },
+  "wikitext_mean_ref_ppl": 11.535909158388774,
+  "domain_ref_ppl": {
+    "code": 2.2051273584365845,
+    "gujarati": 1.8215180039405823,
+    "hindi": 2.4673737287521362,
+    "shakespeare": 1.4000163674354553
+  },
+  "rejected": [
+    [
+      "dense_technical",
+      0,
+      249
+    ],
+    [
+      "dense_technical",
+      1,
+      211
+    ],
+    [
+      "dialogue",
+      0,
+      257
+    ],
+    [
+      "dialogue",
+      1,
+      229
+    ]
+  ],
+  "wrong_decisions": 2,
+  "total_decisions": 48,
+  "records": [
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.5236649513244629,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.02836916595697403,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0018506910419091582,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007065810495987535,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.6526276469230652,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.011556684970855713,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0006366448942571878,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.000408572843298316,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.2548643946647644,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.006103438325226307,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0006227907724678516,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0003333351342007518,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.1369459331035614,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.0035773084964603186,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.000534373801201582,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.00029461862868629396,
+      "ref_ppl": 1.3101015090942383,
+      "n_tokens": 369
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 2.565122127532959,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.09548681974411011,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.004659563302993774,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0035774128045886755,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 1.5483267307281494,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.05020437017083168,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.002832673955708742,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0016908267280086875,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.7188186049461365,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.03407800942659378,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0032732519321143627,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0013420870527625084,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.422956645488739,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.020236175507307053,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0029742801561951637,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "shakespeare",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0016620142851024866,
+      "ref_ppl": 1.4899312257766724,
+      "n_tokens": 309
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.4667210578918457,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.026437072083353996,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.00128057855181396,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007557480130344629,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.28031980991363525,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.010194502770900726,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0009510157397016883,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0005093453801237047,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.08586928993463516,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.006565717980265617,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0008830566657707095,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0004029389820061624,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.05585286766290665,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.004382869694381952,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.001183939864858985,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.00043584685772657394,
+      "ref_ppl": 2.061633825302124,
+      "n_tokens": 373
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.4825054407119751,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.03666023164987564,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0017173639498651028,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0009995904983952641,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.27796339988708496,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.023272307589650154,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0016221124678850174,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007617196533828974,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.10457505285739899,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.012517828494310379,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0015492381062358618,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0006074899574741721,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.06499017030000687,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.006599653512239456,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0012019637506455183,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "code",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0004679644189309329,
+      "ref_ppl": 2.348620891571045,
+      "n_tokens": 341
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 1.160959005355835,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.10793529450893402,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0023691528476774693,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0014399883802980185,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.36357301473617554,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.03779243305325508,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0014071520417928696,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0008504603756591678,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.1588541865348816,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.01019716914743185,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0010470030829310417,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0005595306283794343,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.09321345388889313,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.006119300611317158,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0007781494641676545,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0005216216668486595,
+      "ref_ppl": 2.4075827598571777,
+      "n_tokens": 551
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 1.2518240213394165,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.1380695402622223,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0026488318108022213,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0019161715172231197,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.2471913993358612,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.019526001065969467,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0014041922986507416,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007547468994744122,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.14106711745262146,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.012286443263292313,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.001040931441821158,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007148789009079337,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.11260712891817093,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.0073484014719724655,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0010138937504962087,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "hindi",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0006811073399148881,
+      "ref_ppl": 2.5271646976470947,
+      "n_tokens": 489
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.7260826826095581,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.10109537839889526,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.002355419099330902,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0018469959031790495,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.18169620633125305,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.012300653383135796,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0010622681584209204,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0006878086715005338,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.09872830659151077,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.007665032520890236,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0008538317633792758,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0005199306178838015,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.0798533633351326,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.006796851754188538,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0009244539542123675,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 0,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.000475728273158893,
+      "ref_ppl": 1.7344491481781006,
+      "n_tokens": 1659
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.8036484718322754,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.0873456820845604,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.005567688494920731,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 3,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.002990781795233488,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.19883963465690613,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.020189566537737846,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0013678371906280518,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 6,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.000890791998244822,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.10506889224052429,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.012875070795416832,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0010434063151478767,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 9,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.0007435425068251789,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(4,4,4)",
+      "kl": 0.08333848416805267,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,4,4)",
+      "kl": 0.007017164491117001,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,4)",
+      "kl": 0.0009513116674497724,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    },
+    {
+      "domain": "gujarati",
+      "sample": 1,
+      "layer": 11,
+      "scheme": "grouped(8,8,8)",
+      "kl": 0.000693956739269197,
+      "ref_ppl": 1.908586859703064,
+      "n_tokens": 1538
+    }
+  ]
+}

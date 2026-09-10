@@ -3,7 +3,35 @@
   "params_per_layer": 218112000,
   "embed_params": 525336576,
   "usable_fraction": 0.7,
+  "convention": "split k = layers 0..k inclusive = k+1 layers",
   "ceilings": {
+    "2": {
+      "bf16": 0,
+      "int8": 3,
+      "int4": 10
+    },
+    "4": {
+      "bf16": 3,
+      "int8": 10,
+      "int4": 24
+    },
+    "5.9": {
+      "bf16": 6,
+      "int8": 16,
+      "int4": 31
+    },
+    "7.81": {
+      "bf16": 10,
+      "int8": 23,
+      "int4": 31
+    },
+    "12": {
+      "bf16": 17,
+      "int8": 31,
+      "int4": 31
+    }
+  },
+  "layers_fit": {
     "2": {
       "bf16": 1,
       "int8": 4,
@@ -17,17 +45,17 @@
     "5.9": {
       "bf16": 7,
       "int8": 17,
-      "int4": 32
+      "int4": 38
     },
     "7.81": {
       "bf16": 11,
       "int8": 24,
-      "int4": 32
+      "int4": 51
     },
     "12": {
       "bf16": 18,
-      "int8": 32,
-      "int4": 32
+      "int8": 38,
+      "int4": 80
     }
   }
 }

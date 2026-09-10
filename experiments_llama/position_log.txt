@@ -1,0 +1,103 @@
+nohup: ignoring input
+Loading model...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:14,  3.87it/s]Loading weights:   1%|          | 2/291 [00:00<01:25,  3.38it/s]Loading weights:   2%|▏         | 5/291 [00:00<00:31,  9.07it/s]Loading weights:   5%|▌         | 15/291 [00:00<00:10, 27.14it/s]Loading weights:   8%|▊         | 23/291 [00:00<00:07, 36.79it/s]Loading weights:  10%|▉         | 29/291 [00:01<00:06, 42.01it/s]Loading weights:  12%|█▏        | 34/291 [00:01<00:07, 36.58it/s]Loading weights:  14%|█▎        | 40/291 [00:01<00:06, 41.78it/s]Loading weights:  15%|█▌        | 45/291 [00:01<00:06, 39.82it/s]Loading weights:  17%|█▋        | 50/291 [00:01<00:06, 38.48it/s]Loading weights:  19%|█▉        | 56/291 [00:01<00:05, 43.24it/s]Loading weights:  21%|██        | 61/291 [00:01<00:06, 37.21it/s]Loading weights:  23%|██▎       | 67/291 [00:02<00:05, 42.46it/s]Loading weights:  25%|██▍       | 72/291 [00:02<00:05, 40.23it/s]Loading weights:  26%|██▋       | 77/291 [00:02<00:05, 38.92it/s]Loading weights:  28%|██▊       | 82/291 [00:02<00:05, 41.20it/s]Loading weights:  30%|██▉       | 87/291 [00:02<00:05, 35.93it/s]Loading weights:  32%|███▏      | 94/291 [00:02<00:04, 43.47it/s]Loading weights:  34%|███▍      | 99/291 [00:02<00:04, 40.82it/s]Loading weights:  36%|███▌      | 104/291 [00:02<00:04, 39.25it/s]Loading weights:  37%|███▋      | 109/291 [00:03<00:04, 41.33it/s]Loading weights:  39%|███▉      | 114/291 [00:03<00:04, 36.13it/s]Loading weights:  42%|████▏     | 121/291 [00:03<00:03, 43.69it/s]Loading weights:  43%|████▎     | 126/291 [00:03<00:04, 40.72it/s]Loading weights:  45%|████▌     | 131/291 [00:03<00:04, 39.26it/s]Loading weights:  47%|████▋     | 136/291 [00:03<00:03, 41.81it/s]Loading weights:  48%|████▊     | 141/291 [00:03<00:04, 35.90it/s]Loading weights:  51%|█████     | 149/291 [00:04<00:03, 40.60it/s]Loading weights:  53%|█████▎    | 154/291 [00:04<00:03, 42.67it/s]Loading weights:  55%|█████▍    | 159/291 [00:04<00:03, 36.70it/s]Loading weights:  57%|█████▋    | 166/291 [00:04<00:02, 43.86it/s]Loading weights:  59%|█████▉    | 171/291 [00:04<00:02, 40.88it/s]Loading weights:  60%|██████    | 176/291 [00:04<00:02, 39.16it/s]Loading weights:  62%|██████▏   | 181/291 [00:04<00:02, 41.68it/s]Loading weights:  64%|██████▍   | 186/291 [00:05<00:02, 36.10it/s]Loading weights:  66%|██████▋   | 193/291 [00:05<00:02, 43.70it/s]Loading weights:  68%|██████▊   | 198/291 [00:05<00:02, 40.92it/s]Loading weights:  70%|██████▉   | 203/291 [00:05<00:02, 39.06it/s]Loading weights:  72%|███████▏  | 209/291 [00:05<00:01, 43.75it/s]Loading weights:  74%|███████▎  | 214/291 [00:05<00:02, 37.88it/s]Loading weights:  76%|███████▌  | 220/291 [00:05<00:01, 42.79it/s]Loading weights:  77%|███████▋  | 225/291 [00:05<00:01, 40.27it/s]Loading weights:  79%|███████▉  | 230/291 [00:06<00:01, 38.59it/s]Loading weights:  81%|████████  | 235/291 [00:06<00:01, 41.02it/s]Loading weights:  82%|████████▏ | 240/291 [00:06<00:01, 36.01it/s]Loading weights:  85%|████████▍ | 247/291 [00:06<00:01, 43.78it/s]Loading weights:  87%|████████▋ | 252/291 [00:06<00:00, 41.18it/s]Loading weights:  88%|████████▊ | 257/291 [00:06<00:00, 39.22it/s]Loading weights:  90%|█████████ | 262/291 [00:06<00:00, 41.76it/s]Loading weights:  92%|█████████▏| 267/291 [00:07<00:00, 36.10it/s]Loading weights:  94%|█████████▍| 274/291 [00:07<00:00, 43.71it/s]Loading weights:  96%|█████████▌| 279/291 [00:07<00:00, 40.85it/s]Loading weights:  98%|█████████▊| 284/291 [00:07<00:00, 39.02it/s]Loading weights:  99%|█████████▉| 289/291 [00:07<00:00, 41.60it/s]Loading weights: 100%|██████████| 291/291 [00:07<00:00, 38.49it/s]
+Loaded 300 passages
+
+  25/300 | 0.2 min | ~2 min left
+  50/300 | 0.4 min | ~2 min left
+  75/300 | 0.6 min | ~2 min left
+  100/300 | 0.8 min | ~2 min left
+  125/300 | 1.0 min | ~1 min left
+  150/300 | 1.2 min | ~1 min left
+  175/300 | 1.4 min | ~1 min left
+  200/300 | 1.6 min | ~1 min left
+  225/300 | 1.7 min | ~1 min left
+  250/300 | 1.9 min | ~0 min left
+  275/300 | 2.1 min | ~0 min left
+  300/300 | 2.3 min | ~0 min left
+
+Collected 2,700 records in 2.3 min
+
+Model: meta-llama/Llama-3.1-8B-Instruct
+2,700 records | 300 texts | seq 256 | layers [3, 6, 9]
+Positional predictors: pos_top1pct, pos_top5pct, bos_share, pos_kurtosis, eff_positions, pos_max_over_mean, chan_pos_alignment, eff_rank
+
+============================================================================================
+DO THE POSITIONAL STATISTICS EVEN VARY ACROSS TEXTS?
+============================================================================================
+If they are constant, they cannot predict anything. cv = sd / mean.
+
+layer     pos_top1pct    pos_top5pct      bos_share   pos_kurtosis  eff_positions  pos_max_over_  chan_pos_alig       eff_rank
+--------------------------------------------------------------------------------------------
+    3          0.0235         0.0218         0.0238         0.0000         0.0021         0.0238         0.0063         0.0690
+    6          0.0466         0.0429         0.0472         0.0001         0.0014         0.0472         0.0134         0.0481
+    9          0.0490         0.0447         0.0496         0.0002         0.0010         0.0496         0.0194         0.0364
+
+============================================================================================
+CORRELATION WITHIN A FIXED CELL  (Pearson / Spearman)
+============================================================================================
+layer           scheme     pos_top1pct    pos_top5pct      bos_share   pos_kurtosis  eff_positions  pos_max_over_  chan_pos_alig       eff_rank
+--------------------------------------------------------------------------------------------
+    3   grouped(4,4,4)           0.121          0.123          0.120         -0.049         -0.088          0.120          0.092          0.060
+    3   grouped(8,4,4)           0.081          0.088          0.080         -0.134         -0.075          0.080          0.124          0.080
+    3   grouped(8,8,4)           0.190          0.194          0.187         -0.042         -0.117          0.187          0.139         -0.046
+    6   grouped(4,4,4)          -0.074         -0.071         -0.072         -0.042         -0.214         -0.072          0.010          0.322
+    6   grouped(8,4,4)           0.288          0.287          0.288          0.129          0.127          0.288          0.052          0.074
+    6   grouped(8,8,4)           0.360          0.362          0.358          0.123          0.119          0.358          0.139          0.023
+    9   grouped(4,4,4)           0.261          0.256          0.263          0.091          0.012          0.263          0.108          0.119
+    9   grouped(8,4,4)           0.325          0.324          0.325          0.065          0.112          0.325          0.063          0.026
+    9   grouped(8,8,4)           0.445          0.446          0.445          0.011          0.271          0.445          0.058         -0.021
+
+Strongest |Pearson| / |Spearman| per positional predictor:
+             pos_top5pct: 0.446 / 0.398
+             pos_top1pct: 0.445 / 0.395
+               bos_share: 0.445 / 0.391
+       pos_max_over_mean: 0.445 / 0.391
+                eff_rank: 0.322 / 0.380
+           eff_positions: 0.271 / 0.306
+      chan_pos_alignment: 0.139 / 0.147
+            pos_kurtosis: 0.134 / 0.133
+
+============================================================================================
+MULTIVARIATE, HELD-OUT VALIDATED
+============================================================================================
+layer           scheme   in-sample R2   held-out R2   implied |r|
+--------------------------------------------------------------------------------------------
+    3   grouped(4,4,4)          0.133         0.037         0.194
+    3   grouped(8,4,4)          0.155         0.093         0.306
+    3   grouped(8,8,4)          0.180         0.087         0.295
+    6   grouped(4,4,4)          0.211         0.115         0.339
+    6   grouped(8,4,4)          0.118        -0.010         0.000
+    6   grouped(8,8,4)          0.167         0.069         0.263
+    9   grouped(4,4,4)          0.150         0.077         0.278
+    9   grouped(8,4,4)          0.122        -0.046         0.000
+    9   grouped(8,8,4)          0.217         0.065         0.255
+
+============================================================================================
+VERDICT
+============================================================================================
+  POSITIONAL predictors:
+    best single, Pearson         : 0.446
+    best single, Spearman        : 0.398
+    best combined, held-out |r|  : 0.339
+    mean in-sample R2            : 0.161
+    mean held-out R2             : 0.054
+
+  For comparison, CHANNEL-MAGNITUDE predictors (11b/11c):
+    best single, Pearson         : 0.391
+    best single, Spearman        : 0.397
+    best combined, held-out |r|  : 0.381
+    mean held-out R2             : 0.000
+
+  Positional structure does NOT predict per-input quality cost either.
+
+  The negative result is now comprehensive. Four independent angles:
+    1. channel-magnitude statistics, individually and linearly
+    2. the same, allowing monotone non-linear relationships
+    3. the same, combined, with held-out validation
+    4. token-POSITION structure and effective rank
+  None yields a usable predictor. Per-input quality cost must be
+  BUDGETED FOR (p95) rather than detected.
+
+Saved: /home/ayush.thakar/thesis/experiments_llama/results/12_position_stats.{json,txt}
