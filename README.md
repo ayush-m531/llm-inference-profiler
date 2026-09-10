@@ -18,9 +18,7 @@ That sequence turned out to matter. Qwen's activation structure is not merely a
 smaller version of Llama's — it is a different shape, and the difference makes
 one of the two research questions unanswerable on Qwen. See below.
 
-The system built on these results lives in
-**[edge-split-controller](https://github.com/ayush-m531/edge-split-controller)**
-— a runtime controller and working two-process split-inference system.
+The system built on these results lives in a companion repository.
 
 ---
 
@@ -366,9 +364,6 @@ from zero. One example: the same layer and scheme gave −0.67pp in one run and
 
 ## Reproducing
 
-Requires `torch`, `transformers`, `numpy`, `matplotlib`, `datasets`, and access
-to `meta-llama/Llama-3.1-8B-Instruct` (gated on Hugging Face).
-
 ```bash
 python3 experiments_llama/01_activation_stats.py     # ~1 min
 python3 experiments_llama/09_bytes_per_split_perlayer.py   # ~2 hrs
@@ -378,6 +373,50 @@ python3 experiments_llama/11b_analyse.py             # no GPU
 
 The analysis scripts (`11b`, `11c`, `13`) read the saved JSON and need no GPU,
 so results can be re-derived without repeating the measurement.
+
+---
+
+## Requirements
+
+Measured and run on:
+
+| | |
+|---|---|
+| Python | 3.12.3 |
+| PyTorch | 2.11.0+cu128 |
+| CUDA | 12.8 |
+| transformers | 5.12.1 |
+| numpy | 2.4.4 |
+| datasets | 5.0.1 |
+| matplotlib | 3.11.0 |
+| GPU | NVIDIA A100-PCIE-40GB, driver 570.172.08 |
+
+```bash
+pip install torch transformers numpy datasets matplotlib
+```
+
+Versions matter more than usual. Several APIs these scripts touch have changed
+recently:
+
+- `model.model.rotary_emb(...)` and `position_embeddings=` — the experiments
+  call decoder layers directly rather than going through `model.forward()`, and
+  that signature differs across Transformers versions
+- `torch_dtype=` is deprecated in favour of `dtype=` in transformers 5.x; the
+  code still uses the old name and emits a warning
+- The WikiText dataset must be loaded as `Salesforce/wikitext`. The bare name
+  `wikitext` no longer resolves in recent `huggingface_hub` — it requires the
+  full `namespace/name` form
+
+**Model access.** `meta-llama/Llama-3.1-8B-Instruct` is gated on Hugging Face.
+Accept the licence on the model page, then `hf auth login`. The weights are
+about 16 GB and download once. Qwen2.5-0.5B-Instruct is not gated.
+
+**Storage.** The bulk collection (`11a_collect`) writes a 43 MB JSON. Together
+with the model cache, budget about 20 GB.
+
+**No GPU needed** for the analysis scripts — `11b_analyse`, `11c_multivariate`
+and `13_ml_hardness` read the saved JSON, so results can be re-derived without
+repeating the measurement.
 
 ---
 
