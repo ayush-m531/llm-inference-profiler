@@ -18,7 +18,9 @@ That sequence turned out to matter. Qwen's activation structure is not merely a
 smaller version of Llama's — it is a different shape, and the difference makes
 one of the two research questions unanswerable on Qwen. See below.
 
-The system built on these results lives in a companion repository.
+The system built on these results lives in
+**[edge-split-controller](https://github.com/ayush-m531/edge-split-controller)**
+— a runtime controller and working two-process split-inference system.
 
 ---
 
