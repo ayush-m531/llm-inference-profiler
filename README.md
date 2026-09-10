@@ -395,7 +395,7 @@ Measured and run on:
 pip install torch transformers numpy datasets matplotlib
 ```
 
-Versions matter more than usual. Several APIs these scripts touch have changed
+Versions matter here. Several APIs these scripts touch have changed
 recently:
 
 - `model.model.rotary_emb(...)` and `position_embeddings=` — the experiments
