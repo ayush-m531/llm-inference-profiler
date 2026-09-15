@@ -433,7 +433,7 @@ transmitted tensor is unaffected by weight precision.
 
 **One calibration corpus.** WikiText-2, English encyclopaedic prose.
 
---
+---
 
 Future work — nine directions, including time as a second optimization
 objective and stronger compression baselines — is in
