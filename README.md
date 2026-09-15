@@ -432,3 +432,9 @@ transmitted tensor is unaffected by weight precision.
 **Llama 3.1 8B only** at scale. 70B does not fit the available GPU.
 
 **One calibration corpus.** WikiText-2, English encyclopaedic prose.
+
+--
+
+Future work — nine directions, including time as a second optimization
+objective and stronger compression baselines — is in
+[RESULTS.md](RESULTS.md#future-work).
