@@ -749,7 +749,38 @@ This would also address the oscillation weakness: hysteresis currently acts on
 *decisions*, so genuine alternation between two valid answers would still
 thrash.
 
-### 8. Replication at 70B
+### 8. Asymmetric quantization
+
+The quantizer here is **symmetric**: the scale is set from `x.abs().max()` and
+the range is built around zero.
+
+```python
+absmax = x.abs().max()
+scale  = absmax / qmax
+```
+
+That assumes the distribution is balanced. The skew measurements suggest it is
+not. Skew mirrored kurtosis almost exactly — same magnitude, opposite sign, in
+nearly every cell — which indicates the heavy tail sits predominantly on the
+**negative** side.
+
+If values in a group run from, say, −320 to +5, a symmetric range spends half
+its codes on positive values that barely occur. Asymmetric quantization stores
+a zero-point alongside the scale and fits the range to the actual minimum and
+maximum, which for a one-sided distribution is worth roughly an extra bit of
+precision at the same bit-width.
+
+The cost is one additional value per group, against the 4-byte scales already
+transmitted — negligible.
+
+**Caveat on the evidence.** Skew was measured as one of nine candidate
+predictors of per-input quality cost, not as an investigation of asymmetry. It
+turned out redundant with kurtosis and was reported as such. The asymmetry
+observation is a by-product, so it points at a hypothesis rather than
+establishing one. Confirming it means measuring the signed minimum and maximum
+per group directly, which the current code does not record.
+
+### 9. Replication at 70B
 
 Llama 3.1 70B does not fit a 40 GB GPU. Whether the activation structure holds
 at that scale is unknown — and Qwen versus Llama already showed that structure
