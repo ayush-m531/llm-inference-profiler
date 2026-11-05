@@ -189,6 +189,7 @@ Numbered in the order they were run.
 | `11a_collect` | Bulk measurement: 86,400 records across 300 WikiText passages |
 | `11b`, `11c`, `12`, `13` | Whether any cheap statistic predicts per-input quality cost |
 | `14_hard_prompts` | Domain generalisation — attempted twice, abandoned, see below |
+| `15_ppl_check` | Perplexity rise across the 300 passages, including the controller's actual choices (no GPU) |
 
 ---
 
@@ -252,6 +253,15 @@ each scheme. Grouped(8,4,4) at layer 7 costs +0.27% perplexity on technical
 prose and +3.01% on narrative. Uniform quantization at 4 and 8 bits produces
 degenerate output at every split.
 
+Those two texts were easier than WikiText, so the 3.01% was optimistic.
+Checked across all 300 passages (`15_ppl_check`, 256 tokens): grouped(8,8,4),
+**33.1% of bf16, keeps the p95 perplexity rise under 1% at layers 5–11**
+(0.75–0.94%). Grouped(8,4,4) at layer 6, **25.5% of bf16, has a median rise of
+1.85%** (p95 4.66%). A KL budget is not a fixed perplexity cost: that
+configuration passes the strict KL budget, and the relaxed budget costs a median
+17.7% at layer 8. These use orderings built from each passage itself; shipped
+orderings matched that choice in 88–94% of cells (`08`).
+
 An important caution: perplexity and readability can diverge. A 56.6%
 perplexity rise at layer 1 still produced fluent text — it simply said
 different things. Do not treat "under 1% is imperceptible" as a law.
@@ -307,6 +317,11 @@ the corpus minimum of 0.035, against a mean of 0.083. The controller was
 reporting that it met a strict budget while missing it for most inputs. Fixed
 by selecting on the 95th percentile.
 
+**A perplexity figure from two texts.** Grouped(8,4,4) was reported as costing
+at most 3.01% perplexity, from two calibration texts. Across 300 passages the
+same scheme at layer 6 has a median rise of 1.85% and a p95 of 4.66%, and 23% of
+passages exceed 3.01% — the same small-sample failure as the table above.
+
 **Split-point results that were measurement noise.** An early experiment
 reported the optimal split moving with sequence length. In fact the byte cost
 was identical at every split (one value repeated 23 times) and so was the
@@ -353,12 +368,14 @@ by record.** With 8 predictors and 300 points a model fits noise readily:
 in-sample R² averaged 0.115 while held-out averaged 0.000, and several cells
 were negative.
 
-**A noise floor of roughly ±0.5 percentage points** was established from
-impossible measurements — several runs reported perplexity *below* the
-uncompressed baseline, which cannot happen, so those negative values are the
-measurement error made visible. Any gain under about 1pp is not distinguishable
-from zero. One example: the same layer and scheme gave −0.67pp in one run and
-+0.64pp in another, differing only in the text.
+**Single-passage differences under about 1.5 points are treated as noise.**
+Across the 43,200 per-layer records, 23.8% show a perplexity rise below zero;
+95% of those lie above −1.5%, the most negative is −8.81%. For one passage that
+is chance — rounding error can raise the probability of the true tokens — not an
+impossibility, as an earlier version of this note claimed with a ±0.5-point
+floor. Claims rest on distributions over many passages. One example: the same
+layer and scheme gave −0.67pp in one run and +0.64pp in another, differing only
+in the text.
 
 ---
 
@@ -369,9 +386,10 @@ python3 experiments_llama/01_activation_stats.py     # ~1 min
 python3 experiments_llama/09_bytes_per_split_perlayer.py   # ~2 hrs
 python3 experiments_llama/11a_collect.py             # ~70 min, 86,400 records
 python3 experiments_llama/11b_analyse.py             # no GPU
+python3 experiments_llama/15_ppl_check.py            # no GPU
 ```
 
-The analysis scripts (`11b`, `11c`, `13`) read the saved JSON and need no GPU,
+The analysis scripts (`11b`, `11c`, `13`, `15`) read the saved JSON and need no GPU,
 so results can be re-derived without repeating the measurement.
 
 ---

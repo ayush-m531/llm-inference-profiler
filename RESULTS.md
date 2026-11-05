@@ -244,6 +244,61 @@ Quality varies inside the byte plateau. No mechanism established.
 > layer 1 still produced fluent text — it simply said different things. Do not
 > treat "under 1% is imperceptible" as a law.
 
+### Checked at scale: 300 passages
+`experiments_llama/15_ppl_check` — reads the records `11a` saved; no GPU
+
+The two calibration texts above were easier than WikiText: reference perplexity
+2.56 and 5.55, against a median of 10.43 over the 300 passages. Every one of
+`11a`'s 43,200 per-layer records already held a perplexity rise, so the
+calibration could be checked at scale.
+
+p95 perplexity rise across 300 passages, 256 tokens:
+
+| Layer | grouped(4,4,4) | grouped(8,4,4) | grouped(8,8,4) | grouped(8,8,8) |
+|---|---|---|---|---|
+| 0 | 34.66% | 2.78% | 1.23% | 0.65% |
+| 1 | 5,351.93% | 99.48% | 4.54% | 2.66% |
+| 2 | 1,526.84% | 22.46% | 2.46% | 1.51% |
+| 3 | 211.44% | 14.95% | 1.48% | 1.14% |
+| 4 | 77.28% | 8.33% | 1.16% | 0.74% |
+| 5 | 73.20% | 6.26% | 0.94% | 0.72% |
+| 6 | 63.51% | 4.66% | 0.86% | 0.66% |
+| 7 | 45.02% | 4.39% | 0.80% | 0.57% |
+| 8 | 29.37% | 3.56% | 0.82% | 0.47% |
+| 9 | 24.31% | 3.32% | 0.79% | 0.47% |
+| 10 | 18.68% | 2.39% | 0.75% | 0.42% |
+| 11 | 14.54% | 2.63% | 0.81% | 0.50% |
+
+The configurations the controller actually chose in the socket demo, 256 tokens:
+
+| Case | Layer, scheme | Share of bf16 | Median rise | p95 rise | Passages over 3.01% |
+|---|---|---|---|---|---|
+| Strict, 7.81 GB free | L6, grouped(8,4,4) | 25.5% | 1.85% | 4.66% | 23.0% |
+| Strict, 5.90 GB free | L1, grouped(8,8,4) | 33.1% | 1.11% | 4.54% | 14.0% |
+| Relaxed, 7.81 GB free | L8, grouped(4,4,4) | 25.1% | 17.73% | 29.37% | 100% |
+| Early stop | L3, grouped(8,8,4) | 33.1% | 0.24% | 1.48% | 0.3% |
+
+**What holds at scale:** grouped(8,8,4), 33.1% of bf16, keeps the p95 rise
+under 1% at every layer from 5 to 11 (0.75–0.94%). Grouped(8,4,4) at layer 6,
+25.5% of bf16, has a median rise of 1.85% and a p95 of 4.66%; 23% of passages
+exceed the 3.01% the two calibration texts suggested as a ceiling (see C9). At
+128 and 512 tokens the same configuration gives medians of 1.80% and 1.91% and
+p95s of 6.46% and 4.21%.
+
+**A KL budget is not a fixed perplexity cost.** Layer 6 with grouped(8,4,4)
+passes the strict budget (p95 KL 0.0398) yet has a median perplexity rise of
+1.85%; across all records with KL ≤ 0.05 the median rise is 0.22%. One likely
+reason: KL compares the whole next-token distribution, while perplexity scores
+only the probability given to the true token, so a small consistent shift away
+from it moves perplexity more than KL.
+
+**The relaxed budget is costly:** layer 8 with grouped(4,4,4) has a median rise
+of 17.7%.
+
+**Caveat:** `11a` built each per-layer ordering from the passage it then
+measured. Orderings from unrelated text matched that oracle's scheme choice in
+88–94% of cells (`08`), so deployed numbers may be slightly worse.
+
 ---
 
 ## Split point selection
@@ -466,9 +521,10 @@ reconfigure for nothing.
 ## The two-process system
 
 `edge.py` / `cloud.py` in the companion repository. Five cases, run end to end.
-"Socket bytes" is what actually crossed the TCP connection.
+"Payload bytes" are the packed activation blocks measured on the TCP
+connection; the small JSON header sent before them is not counted.
 
-| Case | Split | Scheme | Socket bytes | % of bf16 |
+| Case | Split | Scheme | Payload bytes | % of bf16 |
 |---|---|---|---|---|
 | Normal, 7.81 GB | L6 | grouped(8,4,4) | 25,068 | 25.5% |
 | Memory pressure, 5.90 GB | L1 | grouped(8,8,4) | 32,508 | 33.1% |
@@ -480,6 +536,10 @@ reconfigure for nothing.
 12-byte gap accounted for by header scales versus the table's assumed 4 bytes
 per group.
 
+**Quality differs between the cases.** Across 300 passages at 256 tokens, the
+normal case raises perplexity by a median 1.85%, memory pressure by 1.11%, and
+the relaxed case by 17.7%. See [Checked at scale](#checked-at-scale-300-passages).
+
 ### Mid-pass abort
 
 ```
@@ -488,7 +548,7 @@ aborted at        L3
 scheme re-chosen  grouped(8,4,4) -> grouped(8,8,4)
 bytes             25,068 -> 32,508  (+30%)
 cloud resumed     from L4, ran 28 layers instead of 25
-output            unchanged and correct
+output            same next token (one token per request)
 ```
 
 Three things had to work. The split index travels with the payload, so the
@@ -569,6 +629,23 @@ the table showed L5 at 5.90 GB while the function returned a split of L6, above
 its own stated cap. Caught by checking the two against each other rather than
 trusting either.
 
+### C9. A perplexity figure from two texts
+
+Grouped(8,4,4) was reported as costing at most 3.01% perplexity, from two
+calibration texts at layer 7. Across 300 WikiText passages (`15_ppl_check`) the
+same scheme at layer 6 has a median rise of 1.85% and a p95 of 4.66%, and 23% of
+passages exceed 3.01%. The two texts were easier than the corpus — the same
+failure as C2. What holds at scale: grouped(8,8,4) keeps the p95 rise under 1%
+at layers 5–11.
+
+### C10. A noise floor set too small, from "impossible" readings
+
+M4 originally called negative perplexity rises impossible and set a ±0.5-point
+floor from a few runs. A negative rise is not impossible for one passage:
+rounding error can, by chance, raise the probability of the true tokens. Across
+43,200 records, 23.8% are negative, the most negative is −8.81%, and 95% of the
+negatives lie above −1.5%. The single-passage floor is about ±1.5 points.
+
 ---
 
 ## Methodology
@@ -586,11 +663,13 @@ in-sample R² averaged 0.115 while held-out averaged 0.000, several cells
 negative. Splitting by record would leak, since each prompt contributes 48 rows
 in a global model.
 
-**M4. A noise floor of roughly ±0.5 percentage points** was established from
-impossible measurements: several runs reported perplexity *below* the
-uncompressed baseline, which cannot happen, so those negatives are the
-measurement error made visible. Any gain under about 1pp is not distinguishable
-from zero.
+**M4. Single-passage differences under about 1.5 points are treated as noise.**
+Across `11a`'s 43,200 per-layer records, 23.8% show a perplexity rise below
+zero; 95% of those lie above −1.5%, and the most negative is −8.81%. For one
+passage that is chance, not an impossibility: rounding error can raise the
+probability of the true tokens. Claims therefore rest on distributions over many
+passages. An earlier version called these readings impossible and set the floor
+at ±0.5 points from a few runs (see C10).
 
 One demonstration — the same layer and scheme, differing only in the text:
 
@@ -818,5 +897,13 @@ valid answers. Free memory hovering across a layer-fit boundary would thrash.
 - **Weight quantization is out of scope.** It solves memory; this work addresses
 bandwidth. Under weight-only quantization the activation remains bf16, so the
 transmitted tensor is unaffected by weight precision.
+
+- **The relaxed budget is costly.** KL ≤ 0.25 at layer 8 with grouped(4,4,4)
+raises perplexity by a median 17.7% over 300 passages; the strict budget keeps
+typical damage near 1–2%.
+
+- **Quality numbers use oracle orderings.** `11a`, the p95 table and the socket
+demo all rank channels from the text being processed. Orderings shipped with the
+model matched that choice of scheme in 88–94% of cells (`08`).
 
 - **Llama 3.1 8B only** at scale. 70B does not fit the available GPU.
