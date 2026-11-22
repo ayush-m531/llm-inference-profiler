@@ -14,8 +14,8 @@ All experiments ran on a single NVIDIA A100 GPU (GRACE server). The device–ser
 
 | Setting | Data to send (vs. original size) | Quality loss |
 |---|---|---|
-| Strict | 33.1% | under 1% for 95% of 300 test passages |
-| Lighter | 25.5% | 1.9% median |
+| Higher quality | 33.1% | under 1% for 95% of 300 test passages |
+| Smaller size | 25.5% | 1.9% median |
 
 - Ran 86,400 test cases (300 passages × 288 settings) in 70.9 minutes with an unattended Python/PyTorch test harness.
 - Quality loss is reported across all 300 passages (95th percentile and median), not just the average, because it differs a lot from one input to another.
